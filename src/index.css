@@ -2094,7 +2094,7 @@ text-transform: capitalize;
 }
 
 /* icon */
-.icon {
+.iconx {
   width: 307px;
   height: 307px;
   flex-shrink: 0;
@@ -2103,7 +2103,7 @@ text-transform: capitalize;
   align-items: center;
 }
 
-.icon img {
+.iconx img {
   width: 100%;
   display: block;
   object-fit: cover;

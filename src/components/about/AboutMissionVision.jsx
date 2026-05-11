@@ -71,7 +71,7 @@ const AboutMissionVision = () => {
           <div className="left-content">
             {/* Mission */}
             <div className="box mission-box" ref={missionRef}>
-              <div className="icon">
+              <div className="iconx">
                 <img src={side1} alt="" />
               </div>
 
@@ -109,7 +109,7 @@ const AboutMissionVision = () => {
 
             {/* Vision */}
             <div className="box vision-box" ref={visionRef}>
-              <div className="icon">
+              <div className="iconx">
                <svg xmlns="http://www.w3.org/2000/svg" width="263" height="186" viewBox="0 0 263 186" fill="none">
   <path d="M3.99929 97.2467C2.93253 94.3729 2.93253 91.2117 3.99929 88.3379C14.389 63.1456 32.0251 41.6056 54.6716 26.4486C77.318 11.2916 103.955 3.2002 131.206 3.2002C158.456 3.2002 185.093 11.2916 207.74 26.4486C230.386 41.6056 248.022 63.1456 258.412 88.3379C259.479 91.2117 259.479 94.3729 258.412 97.2467C248.022 122.439 230.386 143.979 207.74 159.136C185.093 174.293 158.456 182.384 131.206 182.384C103.955 182.384 77.318 174.293 54.6716 159.136C32.0251 143.979 14.389 122.439 3.99929 97.2467Z" stroke="#B1EBE0" stroke-width="6.4" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M131.206 131.192C152.413 131.192 169.606 114 169.606 92.7923C169.606 71.5846 152.413 54.3923 131.206 54.3923C109.998 54.3923 92.8057 71.5846 92.8057 92.7923C92.8057 114 109.998 131.192 131.206 131.192Z" stroke="#B1EBE0" stroke-width="6.4" stroke-linecap="round" stroke-linejoin="round"/>

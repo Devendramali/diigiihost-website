@@ -108,6 +108,9 @@ const HoneContact = () => {
                                 <textarea type="text" rows={6}  placeholder='Message'/>
                             </div>
                         </div>
+                        <div className="col-lg-12">
+                           <button className='btn1'>Submit</button>
+                        </div>
                     </div>
                 </form>
             </div>

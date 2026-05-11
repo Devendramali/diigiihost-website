@@ -1,19 +1,28 @@
-import React from 'react'
+import React from "react";
 
-const Breadcrumb = () => {
+const Breadcrumb = ({ breadcrumb }) => {
   return (
-    <div className='breadcrumb'>
-            <h2>Soupherb</h2>
+    <div className="breadcrumb">
+      {/* Last item show in h2 */}
+      <h2>{breadcrumb[breadcrumb.length - 1]}</h2>
 
-        <ul>
-            <li><a href="">Home</a></li>
-            <li>|</li>
-            <li><a href="">Protfolio</a></li>
-            <li>||</li>
-            <li><a href="">Soupherb</a></li>
-        </ul>
+      <ul>
+        {breadcrumb.map((item, index) => (
+          <React.Fragment key={index}>
+            <li>
+              <a href="">{item}</a>
+            </li>
+
+            {/* Last item ke pehle || */}
+            {index === breadcrumb.length - 2 && <li>||</li>}
+
+            {/* Baaki sab ke beech | */}
+            {index < breadcrumb.length - 2 && <li>|</li>}
+          </React.Fragment>
+        ))}
+      </ul>
     </div>
-  )
-}
+  );
+};
 
-export default Breadcrumb
+export default Breadcrumb;

@@ -5,7 +5,7 @@ import Details from '../components/soupherb/Details'
 const SoupHerb = () => {
   return (
     <>
-        <Breadcrumb/>
+        <Breadcrumb breadcrumb={["Home","Protfolio","Soupherb"]}/>
         <Details/>
     </>
   )

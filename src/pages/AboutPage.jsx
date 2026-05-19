@@ -8,17 +8,21 @@ import AboutDesign from '../components/about/AboutDesign'
 import AboutSnapShot from '../components/about/AboutSnapShot'
 import LogoReveal from '../components/about/LogoReveal'
 import AboutMissionVision from '../components/about/AboutMissionVision'
+import BrandGravity from '../components/about/BrandGravity'
+import Timeline from '../components/about/Timeline'
 
 const AboutPage = () => {
   return (
     <>
     <Breadcrumb breadcrumb={["Home","About"]}/>
     <AboutText/>
+    <Timeline/>
     <AboutCta/>
     <AboutAg/>
     <AboutCard/>
     <AboutDesign/>
     <AboutSnapShot/>
+    <BrandGravity/>
     <AboutMissionVision/>
     <LogoReveal/>
     </>

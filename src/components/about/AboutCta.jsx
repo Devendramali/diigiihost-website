@@ -40,10 +40,10 @@ const AboutCta = () => {
       start: "top 75%",
       once: true,
       onEnter: () => {
-        animateCounter(count1, 100, "+");
-        animateCounter(count2, 25, "+");
-        animateCounter(count3, 98, "%");
-        animateCounter(count4, 5, "+");
+        animateCounter(count1, 14, "+ Countries");
+        animateCounter(count2, 30, "+ Industries");
+        animateCounter(count3, 100, "+ Companies");
+        animateCounter(count4, 10, "+ Years");
       },
     });
   }, []);
@@ -53,63 +53,60 @@ const AboutCta = () => {
       <div className="container">
         <div className="cta">
           <div className="row">
-            <div className="col-lg-3">
+            <div className="col-lg-4">
               <div className="ctabox">
                 <figure>
                   <img src={img1} alt="" />
                 </figure>
-                <h3 ref={count1}>0+</h3>
+                <h3 ref={count1}>0+ Countries</h3>
                 <p>
-                  Projects crafted across diverse industries with a focus on
-                  modern, scalable digital experiences.
-                </p>
-              </div>
-            </div>
-
-            <div className="col-lg-6">
-              <figure>
-                <img src={ctaabout} alt="" />
-              </figure>
-            </div>
-
-            <div className="col-lg-3">
-              <div className="ctabox">
-                <figure>
-                  <img src={img2} alt="" />
-                </figure>
-                <h3 ref={count2}>0+</h3>
-                <p>
-                  Projects crafted across diverse industries with a focus on
-                  modern, scalable digital experiences.
+                  Collaborating with founders, institutions, and businesses across global markets while staying rooted in purposeful execution.
                 </p>
               </div>
             </div>
 
             <div className="col-lg-4">
+              <figure>
+                <img src={ctaabout} alt="" />
+              </figure>
+            </div>
+
+            <div className="col-lg-4">
               <div className="ctabox">
                 <figure>
-                  <img src={img3} alt="" />
+                  <img src={img2} alt="" />
                 </figure>
-                <h3 ref={count3}>0%</h3>
+                <h3 ref={count2}>0+ Industries</h3>
                 <p>
-                  Client satisfaction achieved through collaborative execution,
-                  transparent communication, and detail-focused project delivery.
+                From healthcare and hospitality to manufacturing, education, technology, and government ecosystems — every industry taught us a different way people build trust.
                 </p>
               </div>
             </div>
 
             <div className="col-lg-5">
+              <div className="ctabox">
+                <figure>
+                  <img src={img3} alt="" />
+                </figure>
+                <h3 ref={count3}>+ Companies</h3>
+                <p>
+                 Brands, platforms, and digital systems crafted across industries ranging from healthcare and education to manufacturing, hospitality, and government.
+                </p>
+              </div>
+            </div>
+
+            <div className="col-lg-3">
               <figure>
                 <img src={ctaabout2} alt="" />
               </figure>
             </div>
 
-            <div className="col-lg-3">
+            <div className="col-lg-4">
               <div className="ctabox">
                 <figure>
                   <img src={img4} alt="" />
                 </figure>
-                <h3 ref={count4}>0+</h3>
+                <h3 ref={count4}>0+ Years</h3>
                 <p>
                   Years spent refining creative processes, development systems,
                   and premium web design standards.

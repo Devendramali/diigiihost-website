@@ -8,17 +8,19 @@ gsap.registerPlugin(ScrollTrigger);
 const AboutText = () => {
   const textRef = useRef(null);
 
-  const headingText = `We started with a simple belief — great websites should do more than just exist online. They should communicate clearly, build trust instantly, and create experiences people remember. What began as a passion for design and digital storytelling evolved into a creative studio focused on crafting modern websites that help brands grow with clarity and confidence.`;
+  const headingText = ` We did not begin by chasing trends, algorithms, or vanity metrics. We began with a quieter belief, that brands deserve clarity before visibility, trust before traction, and meaning before scale. What started as a pursuit of thoughtful design slowly evolved into a brand engineering studio helping founders, family businesses, and growing organizations build identities people don’t just notice, but remember, trust, and return to.Today, DiigiiHost works at the intersection of soul, systems, and storytelling, crafting brands that feel aligned from the inside out.`;
 
   useEffect(() => {
     const words = headingText.split(" ");
 
-    textRef.current.innerHTML = words
-      .map(
-        (word) =>
-          `<span class="word"><span class="inner-word">${word}</span></span>`
-      )
-      .join(" ");
+  textRef.current.innerHTML =
+  `<span class="space-block"></span><span class="space-block"></span><span class="space-block"></span>` +
+  words
+    .map(
+      (word) =>
+        `<span class="word"><span class="inner-word">${word}</span></span>`
+    )
+    .join(" ");
 
     const allWords = textRef.current.querySelectorAll(".inner-word");
 
@@ -32,8 +34,8 @@ const AboutText = () => {
       ease: "none",
       scrollTrigger: {
         trigger: textRef.current,
-        start: "top 80%",
-        end: "bottom 30%",
+        start: "top 50%",
+        end: "30% 30%",
         scrub: true,
       },
     });
@@ -50,9 +52,15 @@ const AboutText = () => {
           <div className="col-lg-6">
             <div className="abtxt">
               <p>
-                What started as a small creative pursuit slowly evolved into a
-                studio built on clarity, craft, and meaningful digital
-                experiences shaped project by project, milestone by milestone.
+                Some businesses are built from ambition. 
+                Others are built from inheritance.
+              </p>
+              <p>
+               Both eventually arrive at the same question:
+              “How do we grow without losing who we are?”
+              </p>
+              <p>
+                That question shapes everything we do.
               </p>
             </div>
           </div>

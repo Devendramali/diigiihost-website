@@ -60,7 +60,7 @@ const BrandGravity = () => {
       });
 
       tl.to(mainhead, {
-        opacity: 1,
+        opacity: 0.8,
         y: 0,
         duration: 1,
       })
@@ -123,15 +123,12 @@ const BrandGravity = () => {
         <div className="gravitycontainer" ref={sectionRef}>
           <div className="soultext">
             <h2>
-              When soul guides decisions,
-              <br />
-              science supports execution,
-              <br />
-              and scale is approached consciously,
-              <br />
-              brands stop chasing attention.
-              <br />
-              They start earning trust.
+              When Soul shapes positioning, <br />
+              Science structures execution,<br />
+              And Scale is approached consciously, <br />
+              brands stop chasing attention. <br />
+              They start building trust, recognition, <br />
+              and long-term recall.
             </h2>
           </div>
 

@@ -1670,28 +1670,37 @@ max-width: 592px;
   padding: 62px 0;
 }
 
-.textscroll P{
+.textscroll p{
   color: var(--accent2, #B1EBE0);
 font-family: var(--AristaPro);
-font-size: 2.5rem;
+font-size: 2rem;
 font-style: normal;
 font-weight: 300;
 line-height: 120%; /* 48px */
+}
+.space-block{
+    display: inline-block;
+    width: 50px;
 }
 
 .abtxt p{
   color: var(--accent1, #1A766D);
 font-family: var(--Altone);
-font-size: 1.5rem;
+font-size: 1.25rem;
 font-style: normal;
 font-weight: 400;
 line-height: 120%; /* 28.8px */
 text-transform: capitalize;
+width: 475px;
+text-align: left;
+
 }
 .abtxt{
-    height: 100%;
+height: 100%;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 .ctabox{
   position: relative;
@@ -1761,6 +1770,8 @@ text-transform: capitalize;
   display: flex;
   flex-direction: column;
   gap: 54px;
+  align-items: flex-start;
+  justify-content: space-around;
 }
 .aboutag figure{
   height: 100%;
@@ -1782,7 +1793,7 @@ line-height: 120%; /* 48px */
 .thoths h3{
   color: #B3B3B3;
 font-family: var(--Altone);
-font-size: 22px;
+font-size: 1.375rem;
 font-style: normal;
 font-weight: 400;
 line-height: 120%; /* 26.4px */
@@ -1798,9 +1809,22 @@ font-weight: 300;
 line-height: 120%; /* 48px */
 max-width: 870px;
 margin: auto;
-margin-bottom: 68px;
+margin-bottom: 16px;
+}
+.abcard > p{
+  color: #F3F3F3;
+text-align: center;
+font-family: var(--Altone);
+font-size: 16px;
+font-style: normal;
+font-weight: 300;
+line-height: 120%; /* 19.2px */
+text-align: center;
+  margin-bottom: 68px;
+
 }
 .abcard {
+  padding-top: 50px;
   padding-bottom: 52px;
 }
 .abcard .row{
@@ -1989,7 +2013,7 @@ background: #2C2C2C;
 .centertext h2 {
 color: var(--accent2, #B1EBE0);
 font-family: var(--AristaPro);
-font-size: 2rem;
+font-size: 2.5rem;
 font-style: normal;
 font-weight: 300;
 line-height: 120%; /* 48px */
@@ -2156,7 +2180,7 @@ text-transform: capitalize;
   position: relative;
   max-width: 100%;
   margin: auto;
-  height: 1200px;
+  height: 1300px;
 }
 
 .topstage {
@@ -2219,7 +2243,7 @@ text-align: left;
   color: var(--accent2, #B1EBE0);
 text-align: center;
 font-family: var(--AristaPro);
-font-size: 48px;
+font-size: 3rem;
 font-style: normal;
 font-weight: 300;
 line-height: 140%; /* 67.2px */
@@ -2230,11 +2254,12 @@ margin-top: 34px;
 color: var(--accent2, #B1EBE0);
 text-align: center;
 font-family: var(--AristaPro);
-font-size: 48px;
+font-size: 3rem;
 font-style: normal;
 font-weight: 300;
 line-height: 140%; /* 67.2px */
 text-transform: capitalize;
+opacity: 0.8;
 }
 .topstage .card1{
   transform: translate(-100px, -600px);
@@ -2250,10 +2275,10 @@ text-transform: capitalize;
 
 .timeline-wrapper {
   width: 100%;
-  height: 100vh;
+  height: 800px;
   /* background: #262626; */
   padding: 60px 20px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 /* TOP YEARS */
@@ -2263,14 +2288,15 @@ text-transform: capitalize;
   margin-bottom: 25px;
 }
 
-.timeline-years span {
+.timeline-main h1 {
 color: #757575;
 font-family: var(--Altone);
-font-size: 24px;
+font-size: 1.5rem;
 font-style: normal;
 font-weight: 300;
 line-height: 100%; /* 24px */
   transition: 0.4s;
+  margin-bottom: 16px;
 }
 
 .timeline-years span.active {
@@ -2279,10 +2305,12 @@ line-height: 100%; /* 24px */
 
 /* MAIN */
 .timeline-main {
-  display: flex;
-  align-items: flex-start;
-}
+  /* display: flex; */
+  /* align-items: flex-start; */
 
+  padding-left:13px ;
+}
+.timeline-main
 /* LEFT LINE */
 .timeline-line {
   width: 2px;
@@ -2307,11 +2335,40 @@ line-height: 100%; /* 24px */
 .timeline-content {
   width: 442px;
 }
-
+.timelinewrappewr{
+  display: flex;
+}
+.timeline-main.active {} 
+.timeline-main {
+  width: 13%;
+  border: none;
+} 
+.timeline-main.active {
+  width: 40%;
+    border-left: 4px solid #5A5A5A;
+} 
+.timeline-main .timeline-content h2{ 
+  display: none;
+} 
+.timeline-main .timeline-content p{
+  display: none;
+} 
+.timeline-main .timeimg{
+  display: none;
+} 
+.timeline-main.active .timeline-content h2{ 
+  display: block;
+} 
+.timeline-main.active .timeline-content p{
+  display: block;
+} 
+.timeline-main.active .timeimg{
+  display: block;
+} 
 .timeline-content h2 {
 color: var(--accent2, #B1EBE0);
 font-family: var(--AristaPro);
-font-size: 32px;
+font-size: 2rem;
 font-style: normal;
 font-weight: 300;
 line-height: 120%; /* 38.4px */
@@ -2319,7 +2376,7 @@ line-height: 120%; /* 38.4px */
 }
 
 .timeline-content p {
-  font-size: 17px;
+  font-size: 1.063rem;
   line-height: 1.4;
   color: #d1d1d1;
   margin-bottom: 20px;
@@ -2337,7 +2394,7 @@ line-height: 120%; /* 38.4px */
 .heading1 h2{
   color: var(--accent2, #B1EBE0);
 font-family: var(--AristaPro);
-font-size: 40px;
+font-size: 2.5rem;
 font-style: normal;
 font-weight: 300;
 line-height: 120%; /* 48px */

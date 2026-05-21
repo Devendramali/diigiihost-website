@@ -10,6 +10,7 @@ import Blog from './pages/Blog'
 import BlogDetailsPage from './pages/BlogDetailsPage'
 import ContactPage from './pages/ContactPage'
 import AboutPage from './pages/AboutPage'
+import Career from './pages/Career'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -27,6 +28,7 @@ function App() {
             <Route path='/blog-details' element={<BlogDetailsPage />} />
             <Route path='/contact' element={<ContactPage />} />
             <Route path='/about' element={<AboutPage />} />
+            <Route path='/career' element={<Career />} />
 
           </Route>
         </Routes>

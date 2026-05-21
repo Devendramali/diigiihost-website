@@ -30,27 +30,30 @@ const Details = () => {
   const videoScaleRef = useRef(null)
 
   useEffect(() => {
+
+     
     const ctx = gsap.context(() => {
-      gsap.fromTo(
-        textRef.current,
-        {
-          fontSize: "64px",
-          x: "0%",
-          y: "0%",
-        },
-        {
-          fontSize: "200px",
-          x: "40%",
-          y: "50%",
-          ease: "none",
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top 80%",
-            end: "10% 40%",
-            scrub: 1,
-          },
-        }
-      )
+    gsap.fromTo(
+  textRef.current,
+  {
+    fontSize: window.innerWidth <= 991 ? "40px" : "64px",
+    x: "0%",
+    y: "0%",
+  },
+  {
+    fontSize: window.innerWidth <= 991 ? "64px" : "200px",
+    x: window.innerWidth <= 991 ? "0%" : "40%",
+    y: window.innerWidth <= 991 ? "20%" : "50%",
+    ease: "none",
+    scrollTrigger: {
+      trigger: sectionRef.current,
+      start: "top 80%",
+      end: "10% 40%",
+      scrub: 1,
+      // markers:true
+    },
+  }
+);
 
       gsap.fromTo(
         videoScaleRef.current,

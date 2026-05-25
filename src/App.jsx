@@ -11,6 +11,8 @@ import BlogDetailsPage from './pages/BlogDetailsPage'
 import ContactPage from './pages/ContactPage'
 import AboutPage from './pages/AboutPage'
 import Career from './pages/Career'
+import Loma from './pages/Loma'
+import Lanova from './pages/Lanova'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -29,6 +31,8 @@ function App() {
             <Route path='/contact' element={<ContactPage />} />
             <Route path='/about' element={<AboutPage />} />
             <Route path='/career' element={<Career />} />
+            <Route path='/loma-dental' element={<Loma />} />
+            <Route path='/lanova' element={<Lanova />} />
 
           </Route>
         </Routes>

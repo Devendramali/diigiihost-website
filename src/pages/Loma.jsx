@@ -1,6 +1,6 @@
 import React from 'react'
 import Breadcrumb from '../components/common/Breadcrumb'
-import LomaDetails from '../components/loma/LomaDetails'
+import LomaDetails from '../components/portfolio/LomaDetails'
 
 const Loma = () => {
   return (

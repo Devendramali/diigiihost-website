@@ -1,6 +1,6 @@
 import React from 'react'
 import Breadcrumb from '../components/common/Breadcrumb'
-import LanovaDetails from '../components/lanova/LanovaDetails'
+import LanovaDetails from '../components/portfolio/LanovaDetails'
 
 const Lanova = () => {
   return (

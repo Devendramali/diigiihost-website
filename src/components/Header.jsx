@@ -41,9 +41,9 @@ const Header = () => {
         <div className="popbody">
             <div className="menu1 text-end">
                 <ul>
-                    <li><NavLink to="/">Home</NavLink></li>
-                    <li><NavLink to="/portfolio">Portfolio</NavLink></li>
-                    <li><NavLink to="/services">Services</NavLink></li>
+                    <li  onClick={() => setOpenMenu(false)}><NavLink to="/">Home</NavLink></li>
+                    <li  onClick={() => setOpenMenu(false)}><NavLink to="/portfolio">Portfolio</NavLink></li>
+                    <li  onClick={() => setOpenMenu(false)}><NavLink to="/services">Services</NavLink></li>
                 </ul>
             </div>
             <div className="boflogo">
@@ -54,10 +54,10 @@ const Header = () => {
             </div>
             <div className="menu1 text-start">
                   <ul>
-                    <li><NavLink to="/about">About</NavLink></li>
-                    <li><NavLink to="/careers">Careers</NavLink></li>
-                    <li><NavLink to="/contact">Contact</NavLink></li>
-                    <li><NavLink to="/blog">Blog</NavLink></li>
+                    <li  onClick={() => setOpenMenu(false)}><NavLink to="/about">About</NavLink></li>
+                    <li  onClick={() => setOpenMenu(false)}><NavLink to="/career">Career</NavLink></li>
+                    <li  onClick={() => setOpenMenu(false)}><NavLink to="/contact">Contact</NavLink></li>
+                    <li  onClick={() => setOpenMenu(false)}><NavLink to="/blog">Blog</NavLink></li>
                 </ul>
             </div>
         </div>

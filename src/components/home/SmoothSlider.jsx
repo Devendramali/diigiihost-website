@@ -117,6 +117,11 @@ const SmoothSlider = () => {
         </div>
 
         <div className="content-box">
+
+          <figure>
+             <img src={slides[active].image} alt="" />
+          </figure>
+
           <h2>{slides[active].title}</h2>
           <p>{slides[active].desc}</p>
 

@@ -92,10 +92,10 @@ const AboutSnapShot = () => {
               slidesPerView: 2.2,
             },
             768: {
-              slidesPerView: 3.2,
+              slidesPerView: 2,
             },
             992: {
-              slidesPerView: 4.5,
+              slidesPerView: 3,
             },
           }}
           className="snapshot-slider"

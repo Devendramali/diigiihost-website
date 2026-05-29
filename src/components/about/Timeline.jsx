@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import timeline from "../../assets/about/timeline.png";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const milestones = [
   {
@@ -61,12 +62,12 @@ export default function Timeline() {
         end: `+=${total * 700}`,
         scrub: 1,
         pin: true,
-        markers: true,
+        // markers: true,
 
         onUpdate: (self) => {
           const index = Math.min(
             total - 1,
-            Math.floor(self.progress * total)
+           Math.floor(self.progress * (total - 1))
           );
 
           setActive(index);
@@ -83,12 +84,16 @@ export default function Timeline() {
 
   // NEXT BUTTON
   const handleNext = () => {
+
+    const st = scrollTriggerRef.current;
+
+    if (!st) return;
+
     if (active < milestones.length - 1) {
       const nextIndex = active + 1;
 
       setActive(nextIndex);
 
-      const st = scrollTriggerRef.current;
 
       gsap.to(window, {
         duration: 1,
@@ -116,7 +121,7 @@ export default function Timeline() {
   };
 
   return (
-    <section className="timeline-wrapper" ref={wrapRef}>
+    <div className="timeline-wrapper" ref={wrapRef}>
       <div className="heading1 d-flex justify-content-between">
         <h2>Milestones That Shaped Us</h2>
 
@@ -185,6 +190,6 @@ export default function Timeline() {
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 }

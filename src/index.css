@@ -3906,6 +3906,13 @@ bottom: -10px;
             flex-direction: column;
         align-items: center;
             max-width: 400px;
+            padding: 0 20px;
+  }
+  .career-popup-box{
+    width: 100%;
+  }
+  .career-popup-box>div{
+    padding: 16px;
   }
 .culture-card:last-child .culture-grid .double-line{
   opacity: 1;
@@ -4603,7 +4610,7 @@ background-size: 100%;
   text-align: center;
 }
 .left-content .box{
-  padding: 40px 0;
+  padding: 40px 16px;
   height: 500px;
 }
 .brandbox1 h4 br{

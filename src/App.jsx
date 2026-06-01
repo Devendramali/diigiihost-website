@@ -20,6 +20,9 @@ import Akirhs from './pages/Akirhs'
 import CaNair from './pages/CaNair'
 import WorldFlair from './pages/WorldFlair'
 import VerteacalBlendz from './pages/VerteacalBlendz'
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -27,6 +30,8 @@ function App() {
   return (
     <>
      <BrowserRouter>
+     <ScrollToTop/>
+
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
@@ -58,6 +63,24 @@ function App() {
      
     </>
   )
+}
+
+
+function ScrollToTop() {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "instant",
+    });
+
+    setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 100);
+  }, [location.pathname]);
+
+  return null;
 }
 
 export default App

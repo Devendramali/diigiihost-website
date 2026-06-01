@@ -8,13 +8,15 @@ const CultureSection = () => {
   const sectionRef = useRef(null);
 
   useEffect(() => {
+  const mm = gsap.matchMedia();
+
+  mm.add("(min-width: 1024px)", () => {
     const ctx = gsap.context(() => {
 
       // =========================
       // FADE IN ANIMATION
       // =========================
       gsap.utils.toArray(".culture-card").forEach((card) => {
-
         const fadeItems = card.querySelectorAll(
           ".fade-item, .pill, .bottom-text"
         );
@@ -28,7 +30,6 @@ const CultureSection = () => {
           scrollTrigger: {
             trigger: card,
             start: "top 70%",
-            // markers:true
           },
         }).to(fadeItems, {
           opacity: 1,
@@ -37,40 +38,32 @@ const CultureSection = () => {
           stagger: 0.08,
           ease: "power3.out",
         });
-
       });
 
       // =========================
-      // PIN DOUBLE II
+      // PIN CENTER
       // =========================
       gsap.utils.toArray(".culture-card").forEach((card, index, cards) => {
-
         const center = card.querySelector(".culture-center");
 
         ScrollTrigger.create({
           trigger: card,
           start: "top 10%",
-
           end:
             index === cards.length - 1
               ? "bottom bottom"
               : "bottom -13%",
-
           pin: center,
           pinSpacing: false,
           scrub: true,
           anticipatePin: 1,
-
-          // markers:true
         });
-
       });
 
       // =========================
       // DOUBLE LINE GROW
       // =========================
       gsap.utils.toArray(".culture-center").forEach((center) => {
-
         const lines = center.querySelectorAll(".double-line");
 
         gsap.fromTo(
@@ -82,21 +75,126 @@ const CultureSection = () => {
             height: "100%",
             duration: 1,
             ease: "power4.out",
-            stagger: 0,
             scrollTrigger: {
               trigger: center,
               start: "top 85%",
-              // markers:true
             },
           }
         );
-
       });
 
     }, sectionRef);
 
     return () => ctx.revert();
-  }, []);
+  });
+
+  mm.add("(min-width: 1024px)", () => {
+    gsap.set(
+      ".fade-item, .pill, .bottom-text",
+      {
+        opacity: 1,
+        y: 0,
+      }
+    );
+
+    gsap.set(".double-line", {
+      height: "100%",
+    });
+  });
+
+  return () => mm.revert();
+}, []);
+
+  // useEffect(() => {
+  //   const ctx = gsap.context(() => {
+
+  //     // =========================
+  //     // FADE IN ANIMATION
+  //     // =========================
+  //     gsap.utils.toArray(".culture-card").forEach((card) => {
+
+  //       const fadeItems = card.querySelectorAll(
+  //         ".fade-item, .pill, .bottom-text"
+  //       );
+
+  //       gsap.set(fadeItems, {
+  //         opacity: 0,
+  //         y: 80,
+  //       });
+
+  //       gsap.timeline({
+  //         scrollTrigger: {
+  //           trigger: card,
+  //           start: "top 70%",
+  //           // markers:true
+  //         },
+  //       }).to(fadeItems, {
+  //         opacity: 1,
+  //         y: 0,
+  //         duration: 1,
+  //         stagger: 0.08,
+  //         ease: "power3.out",
+  //       });
+
+  //     });
+
+  //     // =========================
+  //     // PIN DOUBLE II
+  //     // =========================
+  //     gsap.utils.toArray(".culture-card").forEach((card, index, cards) => {
+
+  //       const center = card.querySelector(".culture-center");
+
+  //       ScrollTrigger.create({
+  //         trigger: card,
+  //         start: "top 10%",
+
+  //         end:
+  //           index === cards.length - 1
+  //             ? "bottom bottom"
+  //             : "bottom -13%",
+
+  //         pin: center,
+  //         pinSpacing: false,
+  //         scrub: true,
+  //         anticipatePin: 1,
+
+  //         // markers:true
+  //       });
+
+  //     });
+
+  //     // =========================
+  //     // DOUBLE LINE GROW
+  //     // =========================
+  //     gsap.utils.toArray(".culture-center").forEach((center) => {
+
+  //       const lines = center.querySelectorAll(".double-line");
+
+  //       gsap.fromTo(
+  //         lines,
+  //         {
+  //           height: 0,
+  //         },
+  //         {
+  //           height: "100%",
+  //           duration: 1,
+  //           ease: "power4.out",
+  //           stagger: 0,
+  //           scrollTrigger: {
+  //             trigger: center,
+  //             start: "top 85%",
+  //             // markers:true
+  //           },
+  //         }
+  //       );
+
+  //     });
+
+  //   }, sectionRef);
+
+  //   return () => ctx.revert();
+  // }, []);
 
   return (
     <section className="culture-section" ref={sectionRef}>

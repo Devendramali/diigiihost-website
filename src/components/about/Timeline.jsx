@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
@@ -51,7 +51,7 @@ export default function Timeline() {
 
   const [active, setActive] = useState(0);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const section = wrapRef.current;
     const total = milestones.length;
 
@@ -62,25 +62,28 @@ export default function Timeline() {
         end: `+=${total * 700}`,
         scrub: 1,
         pin: true,
-        // markers: true,
 
-        onUpdate: (self) => {
-          const index = Math.min(
-            total - 1,
-           Math.floor(self.progress * (total - 1))
-          );
+       onUpdate: (self) => {
+        const index = Math.min(
+          total - 1,
+          Math.floor(self.progress * (total - 1))
+        );
 
-          setActive(index);
-        },
+        setActive(prev => (prev !== index ? index : prev));
+      },
       },
     });
 
     scrollTriggerRef.current = tl.scrollTrigger;
 
-    return () => {
-      tl.kill();
-    };
+ return () => {
+  if (tl.scrollTrigger) {
+    tl.scrollTrigger.kill();
+  }
+  tl.kill();
+};
   }, []);
+
 
   // NEXT BUTTON
   const handleNext = () => {
@@ -121,6 +124,7 @@ export default function Timeline() {
   };
 
   return (
+    <>
     <div className="timeline-wrapper" ref={wrapRef}>
       <div className="heading1 d-flex justify-content-between">
         <h2>Milestones That Shaped Us</h2>
@@ -191,5 +195,6 @@ export default function Timeline() {
         ))}
       </div>
     </div>
+    </>
   );
 }

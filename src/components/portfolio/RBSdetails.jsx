@@ -39,7 +39,7 @@ const RBSdetails = () => {
           y: "0%",
         },
         {
-          fontSize: window.innerWidth <= 991 ? "64px" : "130px",
+          fontSize: window.innerWidth <= 991 ? "54px" : "130px",
           x: window.innerWidth <= 991 ? "0%" : "5%",
           y: window.innerWidth <= 991 ? "20%" : "100%",
           ease: "none",

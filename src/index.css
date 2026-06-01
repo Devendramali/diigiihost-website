@@ -330,6 +330,7 @@ p.copyright {
   left: 0;
   height: 100%;
   width: 100%;
+  z-index: 11;
 }
 
 .bannerbody h1 {
@@ -4267,6 +4268,18 @@ bottom: 20%;
     }
     .homebanner figure{
       height: 800px;
+      position: relative;
+    }
+    .homebanner figure::after{
+        position: absolute;
+        inset: 0;
+        height: 100%;
+        content: "";
+        width: 100%;
+        z-index: 1;
+        opacity: 0.3;
+        display: block;
+        background: #000;
     }
     .map{
       display: none;

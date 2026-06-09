@@ -4239,6 +4239,13 @@ bottom: 20%;
     .homebanner figure{
       height: 800px;
       position: relative;
+      margin: 0;
+    }
+    .abtxt{
+      padding: 40PX;
+    }
+    .culture-card.light .culture-grid{
+      gap: 30px;
     }
     .homebanner figure::after{
         position: absolute;

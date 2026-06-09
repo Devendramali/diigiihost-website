@@ -18,7 +18,10 @@ const BrandGravity = () => {
       const cards = gsap.utils.toArray(".movecard");
       const title = sectionRef.current.querySelector(".brandbox1 h2");
       const sub = sectionRef.current.querySelector(".brandbox1 h4");
-      const mainhead = sectionRef.current.querySelector(".soultext h2");
+      const soul = sectionRef.current.querySelector(".soultext .soul");
+      const science = sectionRef.current.querySelector(".soultext .science");
+      const scale = sectionRef.current.querySelector(".soultext .scale");
+      const com = sectionRef.current.querySelector(".soultext .com");
 
       /* initial state */
       gsap.set(cards[0], {
@@ -43,7 +46,7 @@ const BrandGravity = () => {
         rotate: 8,
       });
 
-      gsap.set([title, sub, mainhead], {
+      gsap.set([title, sub, sub , soul , science , scale , com ], {
         opacity: 0,
         y: 50,
       });
@@ -59,7 +62,7 @@ const BrandGravity = () => {
         },
       });
 
-      tl.to(mainhead, {
+      tl.to(soul, {
         opacity: 0.8,
         y: 0,
         duration: 1,
@@ -72,6 +75,11 @@ const BrandGravity = () => {
         x: -150,
           duration: 1,
         })
+        .to(science, {
+        opacity: 0.8,
+        y: 0,
+        duration: 1,
+      })
 
         .to(cards[1], {
           opacity: 1,
@@ -79,6 +87,11 @@ const BrandGravity = () => {
           x: -80,
           duration: 1,
         })
+        .to(scale, {
+        opacity: 0.8,
+        y: 0,
+        duration: 1,
+      })
 
         .to(cards[2], {
           opacity: 1,
@@ -86,6 +99,11 @@ const BrandGravity = () => {
           x: 200,
           duration: 1,
         })
+        .to(com, {
+        opacity: 0.8,
+        y: 0,
+        duration: 1,
+      })
 
         /* bring all center */
         .to(
@@ -123,12 +141,12 @@ const BrandGravity = () => {
         <div className="gravitycontainer" ref={sectionRef}>
           <div className="soultext">
             <h2>
-              When Soul shapes positioning, <br />
-              Science structures execution,<br />
-              And Scale is approached consciously, <br />
-              brands stop chasing attention. <br />
+             <span className="soul"> When Soul shapes positioning,</span> <br />
+              <span className="science">Science structures execution,</span><br />
+              <span className="scale">And Scale is approached consciously,</span> <br />
+              <span className="com">brands stop chasing attention. <br />
               They start building trust, recognition, <br />
-              and long-term recall.
+              and long-term recall.</span>
             </h2>
           </div>
 

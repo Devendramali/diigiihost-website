@@ -2,24 +2,24 @@ import React, { useEffect, useRef } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
-import main from "../../assets/soup/main.png"
+import main from "../../assets/soup/main.webp"
 import video1 from "../../assets/soup/soupherbloader.mp4"
-import s1 from "../../assets/soup/s1.png"
-import s2 from "../../assets/soup/s2.png"
-import s3 from "../../assets/soup/s3.png"
-import s4 from "../../assets/soup/s4.png"
-import s5 from "../../assets/soup/s5.png"
-import s6 from "../../assets/soup/s6.png"
-import s7 from "../../assets/soup/s7.png"
-import s8 from "../../assets/soup/s8.png"
-import s9 from "../../assets/soup/s9.png"
-import s10 from "../../assets/soup/s10.png"
-import s11 from "../../assets/soup/s11.png"
-import s12 from "../../assets/soup/s12.png"
-import img2 from "../../assets/soup/2.png"
-import img3 from "../../assets/soup/3.png"
-import img4 from "../../assets/soup/4.png"
-import img5 from "../../assets/soup/5.png"
+import s1 from "../../assets/soup/s1.webp"
+import s2 from "../../assets/soup/s2.webp"
+import s3 from "../../assets/soup/s3.webp"
+import s4 from "../../assets/soup/s4.webp"
+import s5 from "../../assets/soup/s5.webp"
+import s6 from "../../assets/soup/s6.webp"
+import s7 from "../../assets/soup/s7.webp"
+import s8 from "../../assets/soup/s8.webp"
+import s9 from "../../assets/soup/s9.webp"
+import s10 from "../../assets/soup/s10.webp"
+import s11 from "../../assets/soup/s11.webp"
+import s12 from "../../assets/soup/s12.webp"
+import img2 from "../../assets/soup/2.webp"
+import img3 from "../../assets/soup/3.webp"
+import img4 from "../../assets/soup/4.webp"
+import img5 from "../../assets/soup/5.webp"
 import FashionSlider from "./Slider"
 
 gsap.registerPlugin(ScrollTrigger)
@@ -42,8 +42,8 @@ const Details = () => {
   },
   {
     fontSize: window.innerWidth <= 991 ? "64px" : "200px",
-    x: window.innerWidth <= 991 ? "0%" : "40%",
-    y: window.innerWidth <= 991 ? "20%" : "50%",
+    x: window.innerWidth <= 991 ? "0%" : "0%",
+    y: window.innerWidth <= 991 ? "20%" : "100%",
     ease: "none",
     scrollTrigger: {
       trigger: sectionRef.current,
@@ -85,11 +85,11 @@ const Details = () => {
   return (
     <div className="detailsbody">
       <div className="container">
-        <figure className="mainimg">
+        <figure className="mainimg" data-gsap>
           <img src={main} alt="" />
         </figure>
 
-        <h3 className="dettext">
+        <h3 className="dettext" data-gsap>
           where ancient Ayurvedic wisdom meets delicious,
           nourishing soups crafted to balance your body
           and delight your taste buds.
@@ -99,7 +99,7 @@ const Details = () => {
           <h2 ref={textRef}>Soupherb</h2>
         </div>
 
-        <div className="subloader">
+        <div className="subloader" data-gsap>
           <video
             src={video1}
             autoPlay
@@ -111,15 +111,15 @@ const Details = () => {
 
         {/* Challenge */}
         <div className="thechallange">
-          <h3>The Challenge</h3>
+          <h3 data-gsap>The Challenge</h3>
 
           <div className="paradiv">
-            <p>
+            <p data-gsap>
               Despite decades of credibility, the brand presence
               no longer reflected the scale and precision of the business.
             </p>
 
-            <p>
+            <p data-gsap>
               The communication felt dated. The positioning lacked
               distinction. And their custom manufacturing expertise
               was getting lost in a commoditized market.
@@ -129,29 +129,29 @@ const Details = () => {
           <div className="soupimgsgal">
             <div className="row">
               <div className="col-lg-12">
-                <figure>
+                <figure data-gsap>
                   <img src={s1} alt="" />
                 </figure>
               </div>
 
               <div className="col-lg-4">
                 <div className="maultiimg">
-                  <figure>
+                  <figure data-gsap>
                     <img src={s3} alt="" />
                   </figure>
 
-                  <figure>
+                  <figure data-gsap>
                     <img src={s4} alt="" />
                   </figure>
 
-                  <figure>
+                  <figure data-gsap>
                     <img src={s5} alt="" />
                   </figure>
                 </div>
               </div>
 
               <div className="col-lg-8">
-                <figure>
+                <figure data-gsap>
                   <img src={s2} alt="" />
                 </figure>
               </div>
@@ -161,18 +161,18 @@ const Details = () => {
 
         {/* Approach */}
         <div className="thechallange">
-          <h3>The Approach</h3>
+          <h3 data-gsap>The Approach</h3>
 
           <div className="paradiv">
-            <p>
+            <p data-gsap>
               We approached the brand through the lens of industrial trust.
             </p>
 
-            <p>
+            <p data-gsap>
               Not flashy marketing. But clarity, structure, and confidence.
             </p>
 
-            <p>
+            <p data-gsap>
               From the website system to the visual language and communication,
               every touchpoint was redesigned to feel dependable, modern,
               and precise.
@@ -182,7 +182,7 @@ const Details = () => {
           <div className="soupimgsgal">
             <div className="row">
               <div className="col-lg-12">
-                <figure>
+                <figure data-gsap>
                   <img src={s6} alt="" />
                 </figure>
               </div>
@@ -192,20 +192,20 @@ const Details = () => {
 
         {/* Identity */}
         <div className="thechallange">
-          <h3>The Identity</h3>
+          <h3 data-gsap>The Identity</h3>
 
           <div className="paradiv">
-            <p>
+            <p data-gsap>
               The resulting identity balances industrial robustness
               with modern presentation.
             </p>
 
-            <p>
+            <p data-gsap>
               Structured layouts. Confident typography.
               Controlled visual language.
             </p>
 
-            <p>
+            <p data-gsap>
               A system designed to communicate capability
               without unnecessary complexity.
             </p>
@@ -214,13 +214,13 @@ const Details = () => {
           <div className="soupimgsgal">
             <div className="row">
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={s7} alt="" />
                 </figure>
               </div>
 
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={s8} alt="" />
                 </figure>
               </div>
@@ -232,14 +232,14 @@ const Details = () => {
 
         {/* Identity */}
         <div className="thechallange">
-          <h3>The Outcome</h3>
+          <h3 data-gsap>The Outcome</h3>
 
           <div className="paradiv">
-            <p>
+            <p data-gsap>
               Rekha Bright Steels now communicates with greater authority, clearer positioning, and stronger consistency across platforms.
             </p>
 
-            <p>
+            <p data-gsap>
               The business evolved from appearing like a conventional supplier to feeling like a long-term industrial partner.
             </p>
 
@@ -249,18 +249,18 @@ const Details = () => {
           <div className="soupimgsgal">
             <div className="row">
               <div className="col-lg-12">
-                <figure>
+                <figure data-gsap>
                   <img src={s9} alt="" />
                 </figure>
               </div>
 
               <div className="col-lg-4">
-                <figure>
+                <figure data-gsap>
                   <img src={s10} alt="" />
                 </figure>
               </div>
               <div className="col-lg-8">
-                <figure>
+                <figure data-gsap>
                   <img src={s11} alt="" />
                 </figure>
               </div>
@@ -272,7 +272,7 @@ const Details = () => {
 
         </div>
 
-        <div className="scrilvideo">
+        <div className="scrilvideo" >
           <div className="videocontainer" ref={videoScaleRef}>
             <img src={img2} alt="" />
             <div className="play">
@@ -290,18 +290,18 @@ const Details = () => {
           <div className="soupimgsgal">
             <div className="row">
               <div className="col-lg-12">
-                <figure>
+                <figure data-gsap>
                   <img src={img3} alt="" />
                 </figure>
               </div>
 
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={img4} alt="" />
                 </figure>
               </div>
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={img5} alt="" />
                 </figure>
               </div>
@@ -316,19 +316,19 @@ const Details = () => {
 
           {/* Identity */}
         <div className="thechallange">
-          <h3>Precis</h3>
+          <h3 data-gsap>Precis</h3>
 
           <div className="paradiv">
-           <p>The goal was never to redesign the legacy, but to present it with greater clarity.</p>
-           <p>Every decision focused on strengthening trust, modernizing perception, and reflecting the discipline the business was already built on.</p>
-           <p>The result is a brand presence that feels experienced, grounded, and future-ready.</p>
+           <p data-gsap>The goal was never to redesign the legacy, but to present it with greater clarity.</p>
+           <p data-gsap>Every decision focused on strengthening trust, modernizing perception, and reflecting the discipline the business was already built on.</p>
+           <p data-gsap>The result is a brand presence that feels experienced, grounded, and future-ready.</p>
 
           </div>
 
             <div className="soupimgsgal">
               <div className="row">
                 <div className="col-lg-12">
-                  <figure>
+                  <figure data-gsap>
                     <img src={s12} alt="" />
                   </figure>
                 </div>

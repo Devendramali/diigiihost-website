@@ -2,21 +2,21 @@ import React, { useEffect, useRef } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
-import lanova from "../../assets/soup/lanova.png"
+import lanova from "../../assets/soup/lanova.webp"
 import lanovavideo from "../../assets/soup/lanovavideo.mp4"
-import lanova1 from "../../assets/soup/lanova1.png"
-import lanova2 from "../../assets/soup/lanova2.png"
-import lanova3 from "../../assets/soup/lanova3.png"
-import lanova4 from "../../assets/soup/lanova4.png"
-import lanova5 from "../../assets/soup/lanova5.png"
-import lanova6 from "../../assets/soup/lanova6.png"
-import lanova7 from "../../assets/soup/lanova7.png"
-import lanova8 from "../../assets/soup/lanova8.png"
-import lanova9 from "../../assets/soup/lanova9.png"
-import lanova10 from "../../assets/soup/lanova10.png"
-import lanova11 from "../../assets/soup/lanova11.png"
+import lanova1 from "../../assets/soup/lanova1.webp"
+import lanova2 from "../../assets/soup/lanova2.webp"
+import lanova3 from "../../assets/soup/lanova3.webp"
+import lanova4 from "../../assets/soup/lanova4.webp"
+import lanova5 from "../../assets/soup/lanova5.webp"
+import lanova6 from "../../assets/soup/lanova6.webp"
+import lanova7 from "../../assets/soup/lanova7.webp"
+import lanova8 from "../../assets/soup/lanova8.webp"
+import lanova9 from "../../assets/soup/lanova9.webp"
+import lanova10 from "../../assets/soup/lanova10.webp"
+import lanova11 from "../../assets/soup/lanova11.webp"
 import lanova11v from "../../assets/soup/lanova11v.mp4"
-import lanova12 from "../../assets/soup/lanova12.png"
+import lanova12 from "../../assets/soup/lanova12.webp"
 
 import FashionSlider from "../soupherb/Slider"
 // import FashionSlider from "./Slider"
@@ -41,8 +41,8 @@ const LanovaDetails = () => {
   },
   {
     fontSize: window.innerWidth <= 991 ? "64px" : "200px",
-    x: window.innerWidth <= 991 ? "0%" : "40%",
-    y: window.innerWidth <= 991 ? "20%" : "50%",
+    x: window.innerWidth <= 991 ? "0%" : "0%",
+    y: window.innerWidth <= 991 ? "0%" : "100%",
     ease: "none",
     scrollTrigger: {
       trigger: sectionRef.current,
@@ -84,11 +84,11 @@ const LanovaDetails = () => {
   return (
     <div className="detailsbody">
       <div className="container">
-        <figure className="mainimg">
+        <figure data-gsap className="mainimg">
           <img src={lanova} alt="" />
         </figure>
 
-        <h3 className="dettext">
+        <h3 data-gsap className="dettext">
          A modern identity for a brand built around refinement, restraint, and quiet confidence.
         </h3>
 
@@ -96,7 +96,7 @@ const LanovaDetails = () => {
           <h2 ref={textRef}>La Nova</h2>
         </div>
 
-        <div className="subloader h-100">
+        <div data-gsap className="subloader">
           <video
             src={lanovavideo}
             autoPlay
@@ -108,15 +108,15 @@ const LanovaDetails = () => {
 
         {/* Challenge */}
         <div className="thechallange">
-          <h3>The Challenge</h3>
+           <h3 data-gsap>The Challenge</h3>
 
           <div className="paradiv">
-            <p>
+            <p data-gsap>
             La Nova needed an identity that felt elevated <br /> without becoming distant.
             </p>
 
-            <p>The existing visual language lacked distinction. <br /> It looked functional, but not memorable. <br /> Premium, but not emotionally resonant. </p>
-            <p>
+            <p data-gsap>The existing visual language lacked distinction. <br /> It looked functional, but not memorable. <br /> Premium, but not emotionally resonant. </p>
+            <p data-gsap>
            The goal was not simply to redesign a logo — <br /> it was to shape a feeling around the brand.
             </p>
           </div>
@@ -124,17 +124,17 @@ const LanovaDetails = () => {
           <div className="soupimgsgal">
             <div className="row">
               <div className="col-lg-12">
-                <figure>
+                <figure data-gsap>
                   <img src={lanova1} alt="" />
                 </figure>
               </div>
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={lanova2} alt="" />
                 </figure>
               </div>
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={lanova3} alt="" />
                 </figure>
               </div>
@@ -148,18 +148,18 @@ const LanovaDetails = () => {
 
         {/* Approach */}
         <div className="thechallange">
-          <h3>The Approach</h3>
+           <h3 data-gsap>The Approach</h3>
 
           <div className="paradiv">
-            <p>
+            <p data-gsap>
             We began by studying how luxury is perceived today.
             </p>
 
-            <p>
+            <p data-gsap>
               Not through excess, <br /> but through clarity. <br /> Not through noise, <br /> but through restraint.
             </p>
 
-            <p>
+            <p data-gsap>
               Every element — typography, spacing, tone, <br /> packaging direction, and digital presence — <br /> was designed to feel composed and intentional.
             </p>
           </div>
@@ -167,7 +167,7 @@ const LanovaDetails = () => {
           <div className="soupimgsgal">
             <div className="row">
               <div className="col-lg-12">
-                <figure>
+                <figure data-gsap>
                   <img src={lanova4} alt="" />
                 </figure>
               </div>
@@ -177,18 +177,18 @@ const LanovaDetails = () => {
 
         {/* Identity */}
         <div className="thechallange">
-          <h3>The Identity</h3>
+           <h3 data-gsap>The Identity</h3>
 
           <div className="paradiv">
-            <p>
+            <p data-gsap>
              The resulting identity system balances <br /> minimalism with warmth.
             </p>
 
-            <p>
+            <p data-gsap>
              Elegant typography. <br /> Controlled contrast. <br /> Structured layouts. <br /> Subtle detailing.
               </p>
 
-            <p>
+            <p data-gsap>
            An identity designed not to demand attention, <br /> but to hold it.
             </p>
           </div>
@@ -197,30 +197,30 @@ const LanovaDetails = () => {
             <div className="row">
               <div className="col-lg-6">
                 <div className="maultiimg">
-                  <figure>
+                  <figure data-gsap>
                     <img src={lanova5} alt="" />
                   </figure>
 
-                  <figure>
+                  <figure data-gsap>
                     <img src={lanova6} alt="" />
                   </figure>
 
-                  <figure>
+                  <figure data-gsap>
                     <img src={lanova7} alt="" />
                   </figure>
                 </div>
               </div>
               <div className="col-lg-6">
                 <div className="maultiimg">
-                  <figure>
+                  <figure data-gsap>
                     <img src={lanova8} alt="" />
                   </figure>
 
-                  <figure>
+                  <figure data-gsap>
                     <img src={lanova9} alt="" />
                   </figure>
 
-                  <figure>
+                  <figure data-gsap>
                     <img src={lanova10} alt="" />
                   </figure>
                 </div>
@@ -233,14 +233,14 @@ const LanovaDetails = () => {
 
         {/* Identity */}
         <div className="thechallange">
-          <h3>The Outcome</h3>
+           <h3 data-gsap>The Outcome</h3>
 
           <div className="paradiv">
-            <p>
+            <p data-gsap>
               
               La Nova now communicates with greater consistency, <br /> stronger recall, and a clearer sense of personality.
               </p>
-            <p>
+            <p data-gsap>
               
             The brand no longer feels like a product. <br /> It feels like a point of view.
             </p>
@@ -250,18 +250,18 @@ const LanovaDetails = () => {
           {/* <div className="soupimgsgal">
             <div className="row">
               <div className="col-lg-12">
-                <figure>
+                <figure data-gsap>
                   <img src={s9} alt="" />
                 </figure>
               </div>
 
               <div className="col-lg-4">
-                <figure>
+                <figure data-gsap>
                   <img src={s10} alt="" />
                 </figure>
               </div>
               <div className="col-lg-8">
-                <figure>
+                <figure data-gsap>
                   <img src={s11} alt="" />
                 </figure>
               </div>
@@ -299,7 +299,7 @@ const LanovaDetails = () => {
           <div className="soupimgsgal">
             <div className="row">
               <div className="col-lg-12">
-                <figure>
+                <figure data-gsap>
                   <img src={lanova12} alt="" />
                 </figure>
               </div>
@@ -315,12 +315,12 @@ const LanovaDetails = () => {
 
           {/* Identity */}
         <div className="thechallange">
-          <h3>Precis</h3>
+           <h3 data-gsap>Precis</h3>
 
           <div className="paradiv">
-           <p>What makes La Nova successful is not any single visual element, <br /> but the discipline behind the entire system.</p>
-           <p>Every decision was made to reduce distraction <br /> and strengthen perception. <br /> The result is a brand that feels calm, <br /> confident, and unmistakably intentional.</p>
-           <p>Rather than chasing trends, <br /> the project focused on creating something enduring — <br /> an identity designed to age with elegance <br /> and communicate without excess.</p>
+           <p data-gsap>What makes La Nova successful is not any single visual element, <br /> but the discipline behind the entire system.</p>
+           <p data-gsap>Every decision was made to reduce distraction <br /> and strengthen perception. <br /> The result is a brand that feels calm, <br /> confident, and unmistakably intentional.</p>
+           <p data-gsap>Rather than chasing trends, <br /> the project focused on creating something enduring — <br /> an identity designed to age with elegance <br /> and communicate without excess.</p>
 
           </div>
 

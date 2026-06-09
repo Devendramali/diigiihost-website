@@ -2,20 +2,20 @@ import React, { useEffect, useRef } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
-import drg from "../../assets/soup/drg.png"
-import drg1 from "../../assets/soup/drg1.png"
-import drg2 from "../../assets/soup/drg2.png"
-import drg3 from "../../assets/soup/drg3.png"
-import drg4 from "../../assets/soup/drg4.png"
-import drg5 from "../../assets/soup/drg5.png"
-import drg6 from "../../assets/soup/drg6.png"
-import drg7 from "../../assets/soup/drg7.png"
-import drg8 from "../../assets/soup/drg8.png"
-import drg9 from "../../assets/soup/drg9.png"
+import drg from "../../assets/soup/drg.webp"
+import drg1 from "../../assets/soup/drg1.webp"
+import drg2 from "../../assets/soup/drg2.webp"
+import drg3 from "../../assets/soup/drg3.webp"
+import drg4 from "../../assets/soup/drg4.webp"
+import drg5 from "../../assets/soup/drg5.webp"
+import drg6 from "../../assets/soup/drg6.webp"
+import drg7 from "../../assets/soup/drg7.webp"
+import drg8 from "../../assets/soup/drg8.webp"
+import drg9 from "../../assets/soup/drg9.webp"
 import drg10 from "../../assets/soup/drg10.mp4"
-import drg11 from "../../assets/soup/drg11.png"
-import drg12 from "../../assets/soup/drg12.png"
-import drg13 from "../../assets/soup/drg13.png"
+import drg11 from "../../assets/soup/drg11.webp"
+import drg12 from "../../assets/soup/drg12.webp"
+import drg13 from "../../assets/soup/drg13.webp"
 import drgvideo from "../../assets/soup/drgvideo.mp4"
 
 
@@ -42,8 +42,8 @@ const DrGaikwadDetails = () => {
         },
         {
           fontSize: window.innerWidth <= 991 ? "64px" : "200px",
-          x: window.innerWidth <= 991 ? "0%" : "25%",
-          y: window.innerWidth <= 991 ? "20%" : "50%",
+          x: window.innerWidth <= 991 ? "0%" : "0%",
+          y: window.innerWidth <= 991 ? "0%" : "100%",
           ease: "none",
           scrollTrigger: {
             trigger: sectionRef.current,
@@ -85,11 +85,11 @@ const DrGaikwadDetails = () => {
   return (
     <div className="detailsbody">
       <div className="container">
-        <figure className="mainimg">
+        <figure data-gsap className="mainimg">
           <img src={drg} alt="" />
         </figure>
 
-        <h3 className="dettext">
+        <h3 data-gsap className="dettext">
           A modern dental identity shaped around <br />trust, precision, and human reassurance.
         </h3>
 
@@ -97,7 +97,7 @@ const DrGaikwadDetails = () => {
           <h2 ref={textRef}>Dr Gaikwad</h2>
         </div>
 
-        <div className="subloader h-100">
+        <div data-gsap className="subloader">
           <video
             src={drgvideo}
             autoPlay
@@ -111,12 +111,12 @@ const DrGaikwadDetails = () => {
 
         {/* Challenge */}
         <div className="thechallange">
-          <h3>The Challenge</h3>
+          <h3 data-gsap>The Challenge</h3>
 
           <div className="paradiv">
-            <p>Despite years of clinical excellence, <br /> the brand presence did not fully reflect <br /> the depth of expertise behind the practice.</p>
-            <p>The communication felt fragmented. <br /> The visual identity lacked consistency. <br /> And the experience of modern dentistry <br /> was not being translated digitally.</p>
-            <p>The challenge was not merely to market a clinic  <br /> it was to build confidence before a patient even walked in.</p>
+            <p data-gsap>Despite years of clinical excellence, <br /> the brand presence did not fully reflect <br /> the depth of expertise behind the practice.</p>
+            <p data-gsap>The communication felt fragmented. <br /> The visual identity lacked consistency. <br /> And the experience of modern dentistry <br /> was not being translated digitally.</p>
+            <p data-gsap>The challenge was not merely to market a clinic  <br /> it was to build confidence before a patient even walked in.</p>
 
 
           </div>
@@ -124,34 +124,34 @@ const DrGaikwadDetails = () => {
           <div className="soupimgsgal">
             <div className="row">
               <div className="col-lg-12">
-                <figure>
+                <figure data-gsap>
                   <img src={drg1} alt="" />
                 </figure>
               </div>
 
               {/* <div className="col-lg-4">
                 <div className="maultiimg">
-                  <figure>
+                  <figure data-gsap>
                     <img src={s3} alt="" />
                   </figure>
 
-                  <figure>
+                  <figure data-gsap>
                     <img src={s4} alt="" />
                   </figure>
 
-                  <figure>
+                  <figure data-gsap>
                     <img src={s5} alt="" />
                   </figure>
                 </div>
               </div> */}
 
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={drg2} alt="" />
                 </figure>
               </div>
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={drg3} alt="" />
                 </figure>
               </div>
@@ -161,17 +161,17 @@ const DrGaikwadDetails = () => {
 
         {/* Approach */}
         <div className="thechallange">
-          <h3>The Approach</h3>
+          <h3 data-gsap>The Approach</h3>
 
           <div className="paradiv">
-            <p>We approached the brand from theperspective of patient psychology.</p>
-            <p>Dental anxiety. <br />
+            <p data-gsap>We approached the brand from theperspective of patient psychology.</p>
+            <p data-gsap>Dental anxiety. <br />
              Fear of pain. <br />
              Fear of judgment. <br />
              Fear of uncertainty.</p>
-            <p>Every touchpoint was redesigned <br />
+            <p data-gsap>Every touchpoint was redesigned <br />
              to feel calmer, clearer, and more reassuring.</p>
-            <p>From the visual identity <br />
+            <p data-gsap>From the visual identity <br />
              to the website structure, <br />
              content language, <br />
              technology positioning, <br />
@@ -185,17 +185,17 @@ const DrGaikwadDetails = () => {
           <div className="soupimgsgal">
             <div className="row">
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={drg4} alt="" />
                 </figure>
               </div>
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={drg5} alt="" />
                 </figure>
               </div>
               <div className="col-lg-12">
-                <figure>
+                <figure data-gsap>
                   <img src={drg6} alt="" />
                 </figure>
               </div>
@@ -205,37 +205,37 @@ const DrGaikwadDetails = () => {
 
         {/* Identity */}
         <div className="thechallange">
-          <h3>The Identity</h3>
+          <h3 data-gsap>The Identity</h3>
 
           <div className="paradiv">
-            <p>The resulting identity balances <br />
+            <p data-gsap>The resulting identity balances <br />
              clinical precision with emotional warmth.</p>
-            <p>Clean compositions. <br />
+            <p data-gsap>Clean compositions. <br />
              Controlled typography. <br />
              Intentional whitespace. <br />
              Technology-led storytelling.</p>
-            <p>A visual language designed <br />
+            <p data-gsap>A visual language designed <br />
              to communicate expertise quietly, <br />
              rather than aggressively.</p>
-            <p>The brand no longer feels transactional. <br />
+            <p data-gsap>The brand no longer feels transactional. <br />
              It feels guided.</p>
           </div>
 
           <div className="soupimgsgal">
             <div className="row">
               <div className="col-lg-12">
-                <figure>
+                <figure data-gsap>
                   <img src={drg7} alt="" />
                 </figure>
               </div>
 
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={drg8} alt="" />
                 </figure>
               </div>
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={drg9} alt="" />
                 </figure>
               </div>
@@ -248,14 +248,14 @@ const DrGaikwadDetails = () => {
 
         {/* Identity */}
         <div className="thechallange">
-          <h3>The Outcome</h3>
+          <h3 data-gsap>The Outcome</h3>
 
           <div className="paradiv">
-            <p>Dr. Shuddhodhan Gaikwad now communicates <br />
+            <p data-gsap>Dr. Shuddhodhan Gaikwad now communicates <br />
              with stronger authority, <br />
              greater consistency, <br />
              and a far more distinctive digital presence.</p>
-            <p>The practice evolved from being perceived <br />
+            <p data-gsap>The practice evolved from being perceived <br />
              as simply another dental clinic <br />
              to becoming a modern dentistry experience <br />
              rooted in trust and transformation.</p>
@@ -284,18 +284,18 @@ const DrGaikwadDetails = () => {
           <div className="soupimgsgal mb-5">
             <div className="row">
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={drg11} alt="" />
                 </figure>
               </div>
 
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={drg12} alt="" />
                 </figure>
               </div>
               <div className="col-lg-12">
-                <figure>
+                <figure data-gsap>
                   <img src={drg13} alt="" />
                 </figure>
               </div>
@@ -310,20 +310,20 @@ const DrGaikwadDetails = () => {
 
         {/* Identity */}
         <div className="thechallange">
-          <h3>Precis</h3>
+          <h3 data-gsap>Precis</h3>
 
           <div className="paradiv">
-            <p>What strengthened the brand was not just aesthetics, but emotional alignment.</p>
-            <p>Patients do not merely choose dentistry based on treatment. They choose based on how safe, <br /> understood, and confident they feel.</p>
-            <p>Every part of the identity system was built around reducing hesitation and increasing trust.</p>
-            <p>The result is a brand presence that feels modern, measured, and deeply patient-aware.</p>
+            <p data-gsap>What strengthened the brand was not just aesthetics, but emotional alignment.</p>
+            <p data-gsap>Patients do not merely choose dentistry based on treatment. They choose based on how safe, <br /> understood, and confident they feel.</p>
+            <p data-gsap>Every part of the identity system was built around reducing hesitation and increasing trust.</p>
+            <p data-gsap>The result is a brand presence that feels modern, measured, and deeply patient-aware.</p>
 
           </div>
 
           {/* <div className="soupimgsgal">
               <div className="row">
                 <div className="col-lg-12">
-                  <figure>
+                  <figure data-gsap>
                     <img src={s12} alt="" />
                   </figure>
                 </div>

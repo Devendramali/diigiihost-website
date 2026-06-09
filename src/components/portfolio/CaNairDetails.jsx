@@ -2,18 +2,18 @@ import React, { useEffect, useRef } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
-import canair from "../../assets/soup/canair.png"
-import canair1 from "../../assets/soup/canair1.png"
-import canair2 from "../../assets/soup/canair2.png"
-import canair3 from "../../assets/soup/canair3.png"
-import canair4 from "../../assets/soup/canair4.png"
-import canair5 from "../../assets/soup/canair5.png"
-import canair6 from "../../assets/soup/canair6.png"
-import canair7 from "../../assets/soup/canair7.png"
-import canair8 from "../../assets/soup/canair8.png"
+import canair from "../../assets/soup/canair.webp"
+import canair1 from "../../assets/soup/canair1.webp"
+import canair2 from "../../assets/soup/canair2.webp"
+import canair3 from "../../assets/soup/canair3.webp"
+import canair4 from "../../assets/soup/canair4.webp"
+import canair5 from "../../assets/soup/canair5.webp"
+import canair6 from "../../assets/soup/canair6.webp"
+import canair7 from "../../assets/soup/canair7.webp"
+import canair8 from "../../assets/soup/canair8.webp"
 import canair9 from "../../assets/soup/canair9.mp4"
-import canair10 from "../../assets/soup/canair10.png"
-import canair11 from "../../assets/soup/canair11.png"
+import canair10 from "../../assets/soup/canair10.webp"
+import canair11 from "../../assets/soup/canair11.webp"
 import canairvideo from "../../assets/soup/canairvideo.mp4"
 
 import FashionSlider from "../soupherb/Slider"
@@ -39,8 +39,8 @@ const CaNairDetails = () => {
         },
         {
           fontSize: window.innerWidth <= 991 ? "64px" : "200px",
-          x: window.innerWidth <= 991 ? "0%" : "50%",
-          y: window.innerWidth <= 991 ? "80%" : "70%",
+          x: window.innerWidth <= 991 ? "0%" : "0%",
+          y: window.innerWidth <= 991 ? "80%" : "100%",
           ease: "none",
           scrollTrigger: {
             trigger: sectionRef.current,
@@ -82,11 +82,11 @@ const CaNairDetails = () => {
   return (
     <div className="detailsbody">
       <div className="container">
-        <figure className="mainimg">
+        <figure data-gsap className="mainimg">
           <img src={canair} alt="" />
         </figure>
 
-        <h3 className="dettext">
+        <h3 data-gsap className="dettext">
          A technology identity designed to feel <br /> globally capable, structured, and future-facing.
         </h3>
 
@@ -94,7 +94,7 @@ const CaNairDetails = () => {
           <h2 ref={textRef}>Ca Nair</h2>
         </div>
 
-        <div className="subloader">
+        <div className="subloader" data-gsap>
           <video
             src={canairvideo}
             autoPlay
@@ -108,17 +108,17 @@ const CaNairDetails = () => {
 
         {/* Challenge */}
         <div className="thechallange">
-          <h3>The Challenge</h3>
+          <h3 data-gsap>The Challenge</h3>
 
           <div className="paradiv">
-            <p>CA Nair had years of expertise, <br />
+            <p data-gsap>CA Nair had years of expertise, <br />
              but the brand presence did not reflect <br />
              the level of professionalism behind the practice.</p>
-            <p>The communication felt traditional. <br />
+            <p data-gsap>The communication felt traditional. <br />
              The identity lacked distinction. <br />
              And the digital experience <br />
              did not build immediate trust.</p>
-            <p>The challenge was not to appear louder — <br />
+            <p data-gsap>The challenge was not to appear louder — <br />
              but to appear clearer and more credible.</p>
 
 
@@ -127,34 +127,34 @@ const CaNairDetails = () => {
           <div className="soupimgsgal">
             <div className="row">
               <div className="col-lg-12">
-                <figure>
+                <figure data-gsap>
                   <img src={canair1} alt="" />
                 </figure>
               </div>
 
               {/* <div className="col-lg-4">
                 <div className="maultiimg">
-                  <figure>
+                  <figure data-gsap>
                     <img src={s3} alt="" />
                   </figure>
 
-                  <figure>
+                  <figure data-gsap>
                     <img src={s4} alt="" />
                   </figure>
 
-                  <figure>
+                  <figure data-gsap>
                     <img src={s5} alt="" />
                   </figure>
                 </div>
               </div> */}
 
               <div className="col-lg-5">
-                <figure>
+                <figure data-gsap>
                   <img src={canair2} alt="" />
                 </figure>
               </div>
               <div className="col-lg-7">
-                <figure>
+                <figure data-gsap>
                   <img src={canair3} alt="" />
                 </figure>
               </div>
@@ -164,12 +164,12 @@ const CaNairDetails = () => {
 
         {/* Approach */}
         <div className="thechallange">
-          <h3>The Approach</h3>
+          <h3 data-gsap>The Approach</h3>
 
           <div className="paradiv">
-            <p>We approached the brand <br /> through the lens of financial reassurance.</p>
-            <p>Clients seek expertise, <br /> but they also seek confidence, <br /> stability, <br /> and clarity.</p>
-            <p>From the visual identity <br /> to the website structure, <br /> service communication, <br /> and overall tone — <br /> every touchpoint was redesigned <br /> to feel composed, structured, and dependable.</p>
+            <p data-gsap>We approached the brand <br /> through the lens of financial reassurance.</p>
+            <p data-gsap>Clients seek expertise, <br /> but they also seek confidence, <br /> stability, <br /> and clarity.</p>
+            <p data-gsap>From the visual identity <br /> to the website structure, <br /> service communication, <br /> and overall tone — <br /> every touchpoint was redesigned <br /> to feel composed, structured, and dependable.</p>
    
           
 
@@ -179,22 +179,22 @@ const CaNairDetails = () => {
           <div className="soupimgsgal">
             <div className="row">
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={canair4} alt="" />
                 </figure>
               </div>
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={canair5} alt="" />
                 </figure>
               </div>
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={canair6} alt="" />
                 </figure>
               </div>
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={canair7} alt="" />
                 </figure>
               </div>
@@ -205,18 +205,18 @@ const CaNairDetails = () => {
 
         {/* Identity */}
         <div className="thechallange">
-          <h3>The Identity</h3>
+          <h3 data-gsap>The Identity</h3>
 
           <div className="paradiv">
-            <p>The resulting identity balances <br /> professional precision with modern simplicity.</p>
-            <p>Minimal layouts. <br /> Controlled typography. <br /> Structured communication. <br /> Clean visual hierarchy.</p>
-            <p>A system designed to communicate trust <br /> without unnecessary complexity.</p>
+            <p data-gsap>The resulting identity balances <br /> professional precision with modern simplicity.</p>
+            <p data-gsap>Minimal layouts. <br /> Controlled typography. <br /> Structured communication. <br /> Clean visual hierarchy.</p>
+            <p data-gsap>A system designed to communicate trust <br /> without unnecessary complexity.</p>
           </div>
 
           <div className="soupimgsgal">
             <div className="row">
               <div className="col-lg-12">
-                <figure>
+                <figure data-gsap>
                   <img src={canair8} alt="" />
                 </figure>
               </div>
@@ -226,11 +226,11 @@ const CaNairDetails = () => {
 
         {/* Identity */}
         <div className="thechallange">
-          <h3>The Outcome</h3>
+          <h3 data-gsap>The Outcome</h3>
 
           <div className="paradiv">
-            <p>CA Nair now communicates <br /> with stronger authority, <br /> greater consistency, <br /> and a far more contemporary presence.</p>
-            <p>The brand evolved <br /> from appearing like a conventional accounting practice <br /> to feeling like a modern financial advisory partner.</p>
+            <p data-gsap>CA Nair now communicates <br /> with stronger authority, <br /> greater consistency, <br /> and a far more contemporary presence.</p>
+            <p data-gsap>The brand evolved <br /> from appearing like a conventional accounting practice <br /> to feeling like a modern financial advisory partner.</p>
 
           </div>
 
@@ -253,14 +253,14 @@ const CaNairDetails = () => {
           <div className="soupimgsgal mb-5">
             <div className="row">
               <div className="col-lg-5">
-                <figure>
+                <figure data-gsap>
                   <img src={canair10} alt="" />
                 </figure>
               </div>
 
                
               <div className="col-lg-7">
-                <figure>
+                <figure data-gsap>
                   <img src={canair11} alt="" />
                 </figure>
               </div>
@@ -275,16 +275,16 @@ const CaNairDetails = () => {
 
         {/* Identity */}
         <div className="thechallange">
-          <h3>Precis</h3>
+          <h3 data-gsap>Precis</h3>
 
           <div className="paradiv">
-            <p>Professional service brands <br />
+            <p data-gsap>Professional service brands <br />
              are built on perception long before interaction.</p>
-            <p>Every decision across the system <br />
+            <p data-gsap>Every decision across the system <br />
              was designed to strengthen trust, <br />
              reduce friction, <br />
              and create a clearer sense of confidence.</p>
-            <p>The result is a brand presence <br />
+            <p data-gsap>The result is a brand presence <br />
              that feels measured, <br />
              credible, <br />
              and quietly authoritative.</p>
@@ -294,7 +294,7 @@ const CaNairDetails = () => {
           {/* <div className="soupimgsgal">
               <div className="row">
                 <div className="col-lg-12">
-                  <figure>
+                  <figure data-gsap>
                     <img src={s12} alt="" />
                   </figure>
                 </div>

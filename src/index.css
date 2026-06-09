@@ -44,7 +44,7 @@ figure {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 11;
+  z-index: 111;
 }
 
 .header .menuwrap {
@@ -299,7 +299,7 @@ p.copyright {
 
 
 .homebanner figure {
-  height: 100%;
+  height: 100vh;
   width: 100%;
 }
 
@@ -310,6 +310,8 @@ p.copyright {
 .homebanner figure img {
   height: 100%;
   width: 100%;
+  object-fit: cover;
+  object-position: center center;
 
 }
 
@@ -568,16 +570,19 @@ p.copyright {
   font-weight: 400;
   line-height: 110%;
   /* 44px */
-  margin-top: 121px;
+  margin-top: 104px;
 }
 
-.homeabout h2 {
-  color: var(--accent1);
+.homeabout h2 span span{
+  color: #B1EBE0;
   font-family: var(--Altone);
   font-size: 2.5rem;
   font-style: normal;
   font-weight: 400;
   line-height: 110%;
+}
+.homeabout h2{
+
   /* 44px */
   max-width: 851px;
 }
@@ -614,6 +619,8 @@ p.copyright {
 .card1 {
   /* background-color: #444444; */
   position: relative;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .card1 svg {
@@ -641,6 +648,11 @@ p.copyright {
   font-weight: 500;
   line-height: 100%;
   /* 16px */
+
+  display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 3;
+align-self: stretch;
 }
 
 .homecontact {
@@ -705,12 +717,22 @@ p.copyright {
   list-style: none;
 }
 
-.social ul li {}
-
-.social ul li a svg path {
-  stroke: #B1EBE0;
+.social ul li:hover {
+  background: #B1EBE0;
+  border-radius: 4px;
 }
 
+.social ul li:hover a svg path {
+  stroke: #1A766D;
+}
+.social ul li a svg path {
+  stroke: #B1EBE0;
+  transition: all .3s linear;
+}
+
+.social ul li{
+  transition: all .3s linear;
+}
 .social ul li a {
   /* display: block; */
   height: 48px;
@@ -1183,7 +1205,7 @@ p.copyright {
   /* font-size: ; */
   font-style: normal;
   font-weight: 300;
-  line-height: 100%;
+  /* line-height: 100%; */
   /* 64px */
   text-transform: capitalize;
 }
@@ -1220,7 +1242,7 @@ p.copyright {
 }
 
 .thechallange {
-  margin-bottom: 64px;
+  margin-bottom: 40px;
 }
 
 .thechallange p {
@@ -1236,7 +1258,13 @@ p.copyright {
 .soupimgsgal {
   margin-top: 64px;
 }
-
+.blog-card .btn2{ 
+  transition: all .3s linear;
+}
+.blog-card .btn2:hover{
+  color: #1A766D;
+  background-color:  #B1EBE0;;
+}
 .soupimgsgal .row {
   gap: 16px 0;
 }
@@ -1446,7 +1474,7 @@ p.copyright {
 
 .slidebtn {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 0;
   transform: translate(16%, -50%);
   z-index: 3;
@@ -1732,19 +1760,28 @@ a:hover {
 }
 
 .leftdetaisl .sidecon ul li {
-  display: none;
+  /* display: none; */
+  width: 0;
+  opacity: 0;
+  transition: all 1s linear;
 }
 
 .leftdetaisl .sidecon ul li:first-child {
   display: block;
+  opacity: 1;
+  width: 100%;
 }
 
 .leftdetaisl .sidecon ul:hover li:first-child {
   display: none;
+    width: 0;
+  opacity: 0;
 }
 
 .leftdetaisl .sidecon ul:hover li {
   display: block;
+    opacity: 1;
+  width: 100%;
 }
 
 .blogdetails figure img {
@@ -1924,11 +1961,12 @@ a:hover {
 
 .textscroll p {
   color: var(--accent2, #B1EBE0);
-  font-family: var(--AristaPro);
+  font-family: var(--Altone);
   font-size: 2rem;
   font-style: normal;
   font-weight: 300;
   line-height: 120%;
+  text-align: justify;
   /* 48px */
 }
 
@@ -1938,7 +1976,7 @@ a:hover {
 }
 
 .abtxt p {
-  color: var(--accent1, #1A766D);
+  color:  #B1EBE0;
   font-family: var(--Altone);
   font-size: 1.25rem;
   font-style: normal;
@@ -1948,15 +1986,25 @@ a:hover {
   text-transform: capitalize;
   width: 475px;
   text-align: left;
+  margin-bottom: 26px;
 
+}
+.abtxt svg{
+  margin-bottom: 24px;
+}
+.sdfdsvsd{
+  margin-top: 97px;
 }
 
 .abtxt {
   height: 100%;
   display: flex;
-  align-items: center;
+  padding: 115px;
+  align-items: left;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
+  background-color: #1E1E1E;
+  border-radius: 8px;
 }
 
 .ctabox {
@@ -2724,12 +2772,17 @@ text-transform: uppercase;
 
 .timeline-main .timeimg {
   display: none;
-}
 
+}
+.timeimg{
+  height: 260px;
+}
 .timeline-main.active .timeline-content h2 {
   display: block;
 }
-
+.timeline-main.active h1{
+  color: #1A766D;
+}
 .timeline-main.active .timeline-content p {
   display: block;
 }
@@ -2850,6 +2903,9 @@ text-transform: uppercase;
   padding: 216px 0;
   max-width: 885px;
   margin: auto;
+  height: 100vh;
+  display: flex;
+    align-items: center;
 }
 
 .careercta h2 {
@@ -3045,7 +3101,7 @@ text-transform: uppercase;
 .hiring-process-section {
   /* background: #1e1e1e; */
   /* color: #c7ffff; */
-  padding: 90px 0;
+  padding: 90px 0 237px;
   overflow: hidden;
   position: relative;
 }
@@ -3090,6 +3146,7 @@ text-transform: uppercase;
 
 .process-item:nth-child(5) {
   margin-bottom: 100px;
+  margin-top: 100px;
 }
 
 .process-item.left {
@@ -3223,7 +3280,7 @@ text-transform: uppercase;
 .process-bottom-text {
   text-align: center;
   margin: auto;
-  margin-top: 190px;
+  margin-top: 220px;
   max-width: 453px;
   position: relative;
 }
@@ -3329,6 +3386,9 @@ bottom: -10px;
 .culture-card.light {
   background-color: transparent;
   padding-bottom: 0;
+}
+.culture-card.light .culture-grid{
+  gap: 0;
 }
 
 .smtext {
@@ -3746,6 +3806,19 @@ bottom: -10px;
 
 
 
+@media (max-width: 1400px){
+.bannerbody h1{
+  font-size: 11rem;
+}
+.culture-center{
+  height: 400px;
+}
+}
+@media (max-width: 1380px){
+  .bannerbody h1{
+    font-size: 10rem;
+  }
+}
 
 
 @media (max-width: 991px) {
@@ -3773,69 +3846,6 @@ bottom: -10px;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* RESPONSIVE */
 
 @media (max-width: 991px) {
@@ -3850,46 +3860,6 @@ bottom: -10px;
   } */
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Responsive */
 @media (max-width: 1024px) {

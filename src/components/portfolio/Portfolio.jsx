@@ -51,17 +51,31 @@ const Portfolio = () => {
       {/* Buttons */}
       <div className="btncontainer1">
         <button
+         type="button"
           className={view === "grid" ? "active" : ""}
-          onClick={() => setView("grid")}
+          onClick={(e) => {
+             window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+            setView("grid");
+          }}
         >
          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-  <path d="M6 16C11 16 13 8 18 8C19.0609 8 20.0783 8.42143 20.8284 9.17157C21.5786 9.92172 22 10.9391 22 12C22 13.0609 21.5786 14.0783 20.8284 14.8284C20.0783 15.5786 19.0609 16 18 16C13 16 11 8 6 8C4.93913 8 3.92172 8.42143 3.17157 9.17157C2.42143 9.92172 2 10.9391 2 12C2 13.0609 2.42143 14.0783 3.17157 14.8284C3.92172 15.5786 4.93913 16 6 16Z" stroke="#FEFEFE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+          <path d="M6 16C11 16 13 8 18 8C19.0609 8 20.0783 8.42143 20.8284 9.17157C21.5786 9.92172 22 10.9391 22 12C22 13.0609 21.5786 14.0783 20.8284 14.8284C20.0783 15.5786 19.0609 16 18 16C13 16 11 8 6 8C4.93913 8 3.92172 8.42143 3.17157 9.17157C2.42143 9.92172 2 10.9391 2 12C2 13.0609 2.42143 14.0783 3.17157 14.8284C3.92172 15.5786 4.93913 16 6 16Z" stroke="#FEFEFE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
         </button>
 
         <button
+         type="button"
           className={view === "list" ? "active" : ""}
-          onClick={() => setView("list")}
+          onClick={(e) => {
+           window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+          setView("list");
+        }}
         >
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path d="M3 5H21M3 12H21M3 19H21" stroke="#1A766D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -74,7 +88,7 @@ const Portfolio = () => {
         <div className="container-fluid p-0" id="grid">
           <div className="custom-gallery">
             {galleryData.map((img, index) => (
-              <div className="item" key={index}>
+              <div className="item" data-gsap key={index}>
                 <img src={img} alt="" />
 
                 <div className="read">
@@ -90,7 +104,7 @@ const Portfolio = () => {
       {view === "list" && (
         <div className="container" id="list">
           {stack.map((item, index) => (
-            <a href="#!" className="portitem" key={index}>
+            <a href="#!" data-gsap className="portitem" key={index}>
               <figure>
                 <img src={item.img} alt="" />
               </figure>

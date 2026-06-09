@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Popupform from './Popupform'
 
 const CurrentOpenings = () => {
+     const [showPopup, setShowPopup] = useState(false);
   return (<>
   <div className="container">
 
@@ -8,7 +10,7 @@ const CurrentOpenings = () => {
         <h2 className="heading">Current Openings</h2>
 
         <div className="current">
-            <a href="#!">
+            <a href="#!" data-gsap onClick={() => setShowPopup(true)}>
                 <div>
                     <div className='link1'>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -21,7 +23,7 @@ const CurrentOpenings = () => {
                     </div>
                 </div>
             </a>
-            <a href="#!">
+            <a href="#!" data-gsap onClick={() => setShowPopup(true)}>
                 <div>
                     <div className='link1'>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -34,7 +36,7 @@ const CurrentOpenings = () => {
                     </div>
                 </div>
             </a>
-            <a href="#!">
+            <a href="#!" data-gsap onClick={() => setShowPopup(true)}>
                 <div>
                     <div className='link1'>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -50,11 +52,11 @@ const CurrentOpenings = () => {
 
         </div>
 
-        <h2 className="heading before">Before You Apply</h2>
+        <h2 className="heading before" data-gsap>Before You Apply</h2>
         <h3>Ask yourself:</h3>
         <h4>Do I want </h4>
 
-        <div className='iwant'>
+        <div className='iwant' data-gsap>
             <div>
 
                 <h2>tasks</h2>
@@ -62,7 +64,7 @@ const CurrentOpenings = () => {
                 <h2>comfort </h2>
             </div>
             <p>Or</p>
-            <div className='white'>
+            <div className='white' data-gsap>
 
                 <h2>growth</h2>
                 <h2>ownership</h2>
@@ -70,13 +72,18 @@ const CurrentOpenings = () => {
             </div>
 
         </div>
-        <h2 className="heading before">If clarity excites you, <br />
+        <h2 className="heading before" data-gsap>If clarity excites you, <br />
             we’re aligned.</h2>
 
 
 
     </div>
   </div>
+
+    <Popupform
+        showPopup={showPopup}
+        setShowPopup={setShowPopup}
+      />
     </>
   ) 
 }

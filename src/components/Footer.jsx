@@ -6,35 +6,35 @@ const Footer = () => {
   return (
     <div className='footer'>
         <div className="footerconainer">
-            <h2>Craftiing viisual storiies that capture the essence of your brand.</h2>
+            <h2 data-gsap>Craftiing viisual storiies that capture the essence of your brand.</h2>
 
             <ul className='footermenu'>
-                <li><Link>HOME</Link></li>
-                <li><Link>Portfolio</Link></li>
-                <li><Link>About</Link></li>
-                <li><Link>Projects</Link></li>
-                <li><Link>Blogs</Link></li>
-                <li><Link>Services</Link></li>
+                <li data-gsap><Link>HOME</Link></li>
+                <li data-gsap><Link>Portfolio</Link></li>
+                <li data-gsap><Link>About</Link></li>
+                <li data-gsap><Link>Projects</Link></li>
+                <li data-gsap><Link>Blogs</Link></li>
+                <li data-gsap><Link>Services</Link></li>
             </ul>
 
             <div className="policy">
                 <ul>
-                    <li><Link>Privacy Policy</Link></li>
-                    <li><Link>User Agreement</Link></li>
-                    <li><Link>Cookie Policy</Link></li>
+                    <li data-gsap><Link>Privacy Policy</Link></li>
+                    <li data-gsap><Link>User Agreement</Link></li>
+                    <li data-gsap><Link>Cookie Policy</Link></li>
                 </ul>
                 <ul>
-                    <li><Link>Instagram</Link></li>
-                    <li><Link>Facebook</Link></li>
-                    <li><Link>Linkedin</Link></li>
-                    <li><Link>Threads</Link></li>
+                    <li data-gsap><Link>Instagram</Link></li>
+                    <li data-gsap><Link>Facebook</Link></li>
+                    <li data-gsap><Link>Linkedin</Link></li>
+                    <li data-gsap><Link>Threads</Link></li>
                 </ul>
             </div>
 
         </div>
         <hr />
-        <p className="copyright">Copyright © 2026. All Rights Reserved. Powered By : DIIGIIHOST</p>
-        <div className="footerlogo">
+        <p className="copyright" data-gsap>Copyright © 2026. All Rights Reserved. Powered By : DIIGIIHOST</p>
+        <div className="footerlogo" data-gsap>
             <img src={footerlog} alt="" />
 
         </div>

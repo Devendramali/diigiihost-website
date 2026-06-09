@@ -17,7 +17,7 @@ const AboutMissionVision = () => {
         <div className="mission-wrap" >
           <div className="left-content">
             {/* Mission */}
-            <div className="box mission-box">
+            <div className="box mission-box" data-gsap>
              
 
               <div className="text">
@@ -27,7 +27,7 @@ const AboutMissionVision = () => {
             </div>
 
             {/* Vision */}
-            <div className="box vision-box">
+            <div className="box vision-box" data-gsap>
            
 
               <div className="text">

@@ -2,18 +2,18 @@ import React, { useEffect, useRef } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
-import vb from "../../assets/soup/vb.png"
-import vb1 from "../../assets/soup/vb1.png"
-import vb2 from "../../assets/soup/vb2.png"
-import vb3 from "../../assets/soup/vb3.png"
+import vb from "../../assets/soup/vb.webp"
+import vb1 from "../../assets/soup/vb1.webp"
+import vb2 from "../../assets/soup/vb2.webp"
+import vb3 from "../../assets/soup/vb3.webp"
 import vb4 from "../../assets/soup/vb4.mp4"
-import vb5 from "../../assets/soup/vb5.png"
-import vb6 from "../../assets/soup/vb6.png"
-import vb7 from "../../assets/soup/vb7.png"
-import vb8 from "../../assets/soup/vb8.png"
-import vb9 from "../../assets/soup/vb9.png"
-import vb10 from "../../assets/soup/vb10.png"
-import vb11 from "../../assets/soup/vb11.png"
+import vb5 from "../../assets/soup/vb5.webp"
+import vb6 from "../../assets/soup/vb6.webp"
+import vb7 from "../../assets/soup/vb7.webp"
+import vb8 from "../../assets/soup/vb8.webp"
+import vb9 from "../../assets/soup/vb9.webp"
+import vb10 from "../../assets/soup/vb10.webp"
+import vb11 from "../../assets/soup/vb11.webp"
 import vb12 from "../../assets/soup/vb12.mp4"
 import vbvideo from "../../assets/soup/vbvideo.mp4"
 
@@ -40,8 +40,8 @@ const VerteacalBlendzDetails = () => {
         },
         {
           fontSize: window.innerWidth <= 991 ? "64px" : "130px",
-          x: window.innerWidth <= 991 ? "0%" : "10%",
-          y: window.innerWidth <= 991 ? "20%" : "100%",
+          x: window.innerWidth <= 991 ? "0%" : "0%",
+          y: window.innerWidth <= 991 ? "0%" : "100%",
           ease: "none",
           scrollTrigger: {
             trigger: sectionRef.current,
@@ -83,11 +83,11 @@ const VerteacalBlendzDetails = () => {
   return (
     <div className="detailsbody">
       <div className="container">
-        <figure className="mainimg">
+        <figure data-gsap className="mainimg">
           <img src={vb} alt="" />
         </figure>
 
-        <h3 className="dettext">
+        <h3 data-gsap className="dettext">
        A legacy tea business reimagined for <br /> a more contemporary and global future.
         </h3>
 
@@ -95,7 +95,7 @@ const VerteacalBlendzDetails = () => {
           <h2 ref={textRef}>Verteacal Blendz</h2>
         </div>
 
-        <div className="subloader h-100">
+        <div data-gsap className="subloader h-100">
           <video
             src={vbvideo}
             autoPlay
@@ -108,19 +108,19 @@ const VerteacalBlendzDetails = () => {
           {/* <div className="soupimgsgal mt-0 mb-5">
             <div className="row">
               <div className="col-lg-12">
-                <figure>
+                <figure data-gsap>
                   <img src={wf1} alt="" />
                 </figure>
               </div>
 
 
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={wf2} alt="" />
                 </figure>
               </div>
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={wf3} alt="" />
                 </figure>
               </div>
@@ -131,11 +131,11 @@ const VerteacalBlendzDetails = () => {
 
         {/* Challenge */}
         <div className="thechallange">
-          <h3>The Challenge</h3>
+          <h3 data-gsap>The Challenge</h3>
 
           <div className="paradiv">
-            <p>Verteacal Blendz carried over six decades <br /> of trust, relationships, and industry experience  <br /> but the brand presence <br /> did not reflect the scale or evolution <br /> of the business.</p>
-            <p>The communication felt traditional. <br /> The visual identity lacked distinction. <br /> And the generational legacy <br /> was not translating effectively <br /> to newer markets and audiences.</p>
+            <p data-gsap>Verteacal Blendz carried over six decades <br /> of trust, relationships, and industry experience  <br /> but the brand presence <br /> did not reflect the scale or evolution <br /> of the business.</p>
+            <p data-gsap>The communication felt traditional. <br /> The visual identity lacked distinction. <br /> And the generational legacy <br /> was not translating effectively <br /> to newer markets and audiences.</p>
         
         
 
@@ -144,32 +144,32 @@ const VerteacalBlendzDetails = () => {
           <div className="soupimgsgal">
             <div className="row">
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={vb1} alt="" />
                 </figure>
               </div>
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={vb2} alt="" />
                 </figure>
               </div>
               <div className="col-lg-12">
-                <figure>
+                <figure data-gsap>
                   <img src={vb3} alt="" />
                 </figure>
               </div>
 
               {/* <div className="col-lg-4">
                 <div className="maultiimg">
-                  <figure>
+                  <figure data-gsap>
                     <img src={s3} alt="" />
                   </figure>
 
-                  <figure>
+                  <figure data-gsap>
                     <img src={s4} alt="" />
                   </figure>
 
-                  <figure>
+                  <figure data-gsap>
                     <img src={s5} alt="" />
                   </figure>
                 </div>
@@ -182,14 +182,14 @@ const VerteacalBlendzDetails = () => {
 
         {/* Approach */}
         <div className="thechallange">
-          <h3>The Approach</h3>
+          <h3 data-gsap>The Approach</h3>
 
           <div className="paradiv">
-            <p>We approached the rebrand <br />
+            <p data-gsap>We approached the rebrand <br />
              through the balance of heritage and progression.</p>
-            <p>The goal was not to erase the past, <br />
+            <p data-gsap>The goal was not to erase the past, <br />
              but to modernize how it was experienced.</p>
-            <p>From the identity system <br />
+            <p data-gsap>From the identity system <br />
              to packaging direction, <br />
              digital communication, <br />
              and brand storytelling  <br />
@@ -211,33 +211,33 @@ const VerteacalBlendzDetails = () => {
 
         {/* Identity */}
         <div className="thechallange">
-          <h3>The Identity</h3>
+          <h3 data-gsap>The Identity</h3>
 
           <div className="paradiv">
-            <p>The resulting identity balances <br />
+            <p data-gsap>The resulting identity balances <br />
              legacy with modern restraint.</p>
-            <p>Structured typography. <br />
+            <p data-gsap>Structured typography. <br />
              Clean visual hierarchy. <br />
              Warm, grounded communication. <br />
              Contemporary presentation systems.</p>
-            <p>A system designed to preserve trust <br />
+            <p data-gsap>A system designed to preserve trust <br />
              while improving relevance.</p>
           </div>
 
           <div className="soupimgsgal">
             <div className="row">
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={vb5} alt="" />
                 </figure>
               </div>
                <div className="col-lg-6">
                 <div className="maultiimg">
-                  <figure>
+                  <figure data-gsap>
                     <img src={vb6} alt="" />
                   </figure>
 
-                  <figure>
+                  <figure data-gsap>
                     <img src={vb7} alt="" />
                   </figure>
                 </div>
@@ -248,11 +248,11 @@ const VerteacalBlendzDetails = () => {
 
         {/* Identity */}
         <div className="thechallange">
-          <h3>The Outcome</h3>
+          <h3 data-gsap>The Outcome</h3>
 
           <div className="paradiv">
-            <p>Verteacal Blendz now communicates <br /> with greater consistency, <br /> stronger market distinction, <br /> and a more contemporary presence.</p>
-            <p>The business evolved <br /> from appearing like a traditional distributor <br /> to feeling like a modern tea brand <br /> built on generations of expertise.</p>
+            <p data-gsap>Verteacal Blendz now communicates <br /> with greater consistency, <br /> stronger market distinction, <br /> and a more contemporary presence.</p>
+            <p data-gsap>The business evolved <br /> from appearing like a traditional distributor <br /> to feeling like a modern tea brand <br /> built on generations of expertise.</p>
    
 
           </div>
@@ -260,23 +260,23 @@ const VerteacalBlendzDetails = () => {
           <div className="soupimgsgal">
             <div className="row">
               <div className="col-lg-12">
-                <figure>
+                <figure data-gsap>
                   <img src={vb8} alt="" />
                 </figure>
               </div>
                <div className="col-lg-6">
                 <div className="maultiimg">
-                  <figure>
+                  <figure data-gsap>
                     <img src={vb9} alt="" />
                   </figure>
 
-                  <figure>
+                  <figure data-gsap>
                     <img src={vb10} alt="" />
                   </figure>
                 </div>
               </div>
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={vb11} alt="" />
                 </figure>
               </div>
@@ -295,16 +295,16 @@ const VerteacalBlendzDetails = () => {
 
         {/* Identity */}
         <div className="thechallange">
-          <h3>Precis</h3>
+          <h3 data-gsap>Precis</h3>
 
           <div className="paradiv">
-            <p>Legacy brands carry something <br />
+            <p data-gsap>Legacy brands carry something <br />
              modern businesses cannot manufacture overnight earned trust.</p>
-            <p>Every decision across the system <br />
+            <p data-gsap>Every decision across the system <br />
              was designed to preserve that credibility <br />
              while helping the brand evolve <br />
              for newer markets and future growth.</p>
-            <p>The result is a brand presence <br />
+            <p data-gsap>The result is a brand presence <br />
              that feels experienced, <br />
              refined, <br />
              and built to continue across generations</p>

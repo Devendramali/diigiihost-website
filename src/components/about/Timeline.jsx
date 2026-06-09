@@ -58,7 +58,7 @@ export default function Timeline() {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: section,
-        start: "10% top",
+        start: "5% top",
         end: `+=${total * 700}`,
         scrub: 1,
         pin: true,
@@ -127,9 +127,9 @@ export default function Timeline() {
     <>
     <div className="timeline-wrapper" ref={wrapRef}>
       <div className="heading1 d-flex justify-content-between">
-        <h2>Milestones That Shaped Us</h2>
+        <h2 data-gsap>Milestones That Shaped Us</h2>
 
-        <div className="btnnestprev">
+        <div className="btnnestprev" data-gsap>
           <div className="snap-btns">
             <button className="snap-prev" onClick={handlePrev}>
               <svg
@@ -170,7 +170,7 @@ export default function Timeline() {
         </div>
       </div>
 
-      <div className="timelinewrappewr">
+      <div className="timelinewrappewr" data-gsap>
         {milestones.map((item, i) => (
           <div
             key={i}

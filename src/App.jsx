@@ -23,9 +23,11 @@ import VerteacalBlendz from './pages/VerteacalBlendz'
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import useGsapAos from './components/hooks/useGsapAos'
 
 function App() {
   const [count, setCount] = useState(0)
+    useGsapAos();
 
   return (
     <>

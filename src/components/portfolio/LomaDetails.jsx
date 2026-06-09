@@ -2,20 +2,20 @@ import React, { useEffect, useRef } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
-import loma from "../../assets/soup/loma.png"
+import loma from "../../assets/soup/loma.webp"
 import lomavideo from "../../assets/soup/lomavideo.mp4"
-import loma1 from "../../assets/soup/loma1.png"
-import loma2 from "../../assets/soup/loma2.png"
-import loma3 from "../../assets/soup/loma3.png"
+import loma1 from "../../assets/soup/loma1.webp"
+import loma2 from "../../assets/soup/loma2.webp"
+import loma3 from "../../assets/soup/loma3.webp"
 import loma4 from "../../assets/soup/loma4.mp4"
-import loma5 from "../../assets/soup/loma5.png"
-import loma6 from "../../assets/soup/loma6.png"
-import loma7 from "../../assets/soup/loma7.png"
-import loma8 from "../../assets/soup/loma8.png"
+import loma5 from "../../assets/soup/loma5.webp"
+import loma6 from "../../assets/soup/loma6.webp"
+import loma7 from "../../assets/soup/loma7.webp"
+import loma8 from "../../assets/soup/loma8.webp"
 import loma9 from "../../assets/soup/loma9.mp4"
-import loma10 from "../../assets/soup/loma10.png"
-import loma11 from "../../assets/soup/loma11.png"
-import loma12 from "../../assets/soup/loma12.png"
+import loma10 from "../../assets/soup/loma10.webp"
+import loma11 from "../../assets/soup/loma11.webp"
+import loma12 from "../../assets/soup/loma12.webp"
 import FashionSlider from "../soupherb/Slider"
 // import FashionSlider from "./Slider"
 
@@ -39,8 +39,8 @@ const LomaDetails = () => {
   },
   {
     fontSize: window.innerWidth <= 991 ? "64px" : "200px",
-    x: window.innerWidth <= 991 ? "0%" : "5%",
-    y: window.innerWidth <= 991 ? "20%" : "40%",
+    x: window.innerWidth <= 991 ? "0%" : "0%",
+    y: window.innerWidth <= 991 ? "20%" : "100%",
     ease: "none",
     scrollTrigger: {
       trigger: sectionRef.current,
@@ -82,11 +82,11 @@ const LomaDetails = () => {
   return (
     <div className="detailsbody">
       <div className="container">
-        <figure className="mainimg">
+        <figure data-gsap className="mainimg">
           <img src={loma} alt="" />
         </figure>
 
-        <h3 className="dettext">
+        <h3 data-gsap className="dettext">
           A premium dental identity designed around modern care, emotional comfort, and transformation.
         </h3>
 
@@ -94,7 +94,7 @@ const LomaDetails = () => {
           <h2 ref={textRef}>Loma Dental</h2>
         </div>
 
-        <div className="subloader">
+        <div data-gsap className="subloader">
           <video
             src={lomavideo}
             autoPlay
@@ -106,18 +106,18 @@ const LomaDetails = () => {
 
         {/* Challenge */}
         <div className="thechallange">
-          <h3>The Challenge</h3>
+          <h3 data-gsap>The Challenge</h3>
 
           <div className="paradiv">
-            <p>
+            <p data-gsap>
              LOMA Dental was envisioned
              as more than a conventional clinic.
             </p>
 
-            <p>
+            <p data-gsap>
             The goal was to create a modern dentistry experience that felt technologically advanced, emotionally aware, and globally aspirational.
             </p>
-            <p>
+            <p data-gsap>
             The challenge was to build a brand that balanced luxury with reassurance — without losing clinical credibility.
             </p>
           </div>
@@ -125,34 +125,34 @@ const LomaDetails = () => {
           <div className="soupimgsgal">
             <div className="row">
               <div className="col-lg-12">
-                <figure>
+                <figure data-gsap>
                   <img src={loma1} alt="" />
                 </figure>
               </div>
 
               {/* <div className="col-lg-4">
                 <div className="maultiimg">
-                  <figure>
+                  <figure data-gsap>
                     <img src={s3} alt="" />
                   </figure>
 
-                  <figure>
+                  <figure data-gsap>
                     <img src={s4} alt="" />
                   </figure>
 
-                  <figure>
+                  <figure data-gsap>
                     <img src={s5} alt="" />
                   </figure>
                 </div>
               </div> */}
 
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={loma2} alt="" />
                 </figure>
               </div>
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={loma3} alt="" />
                 </figure>
               </div>
@@ -162,21 +162,21 @@ const LomaDetails = () => {
 
         {/* Approach */}
         <div className="thechallange">
-          <h3>The Approach</h3>
+          <h3 data-gsap>The Approach</h3>
 
           <div className="paradiv">
-            <p>
+            <p data-gsap>
               We approached the brand
               <br />through the experience of modern dentistry.
             </p>
 
-            <p>
+            <p data-gsap>
             Not cold.
             <br />Not intimidating.
             <br />Not overly clinical.
             </p>
 
-            <p>
+            <p data-gsap>
              From the identity system
              <br />to the website experience,
              <br />interior communication,
@@ -204,18 +204,18 @@ const LomaDetails = () => {
 
         {/* Identity */}
         <div className="thechallange">
-          <h3>The Identity</h3>
+          <h3 data-gsap>The Identity</h3>
 
           <div className="paradiv">
-            <p>
+            <p data-gsap>
              The resulting identity balances <br /> premium aesthetics with human warmth.
             </p>
 
-            <p>
+            <p data-gsap>
               Minimal compositions. <br /> Elegant typography. <br /> Controlled whitespace. <br /> Technology-led storytelling.
             </p>
 
-            <p>
+            <p data-gsap>
              A system designed to communicate sophistication <br /> without feeling distant.
             </p>
           </div>
@@ -223,23 +223,23 @@ const LomaDetails = () => {
           <div className="soupimgsgal">
             <div className="row">
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={loma5} alt="" />
                 </figure>
               </div>
 
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={loma6} alt="" />
                 </figure>
               </div>
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={loma7} alt="" />
                 </figure>
               </div>
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={loma8} alt="" />
                 </figure>
               </div>
@@ -251,14 +251,14 @@ const LomaDetails = () => {
 
         {/* Identity */}
         <div className="thechallange">
-          <h3>The Outcome</h3>
+          <h3 data-gsap>The Outcome</h3>
 
           <div className="paradiv">
-            <p>
+            <p data-gsap>
               
               LOMA Dental now communicates <br /> with stronger distinction, <br /> greater consistency, <br /> and a far more elevated digital presence.</p>
 
-            <p>
+            <p data-gsap>
               
               The brand evolved <br /> from appearing like a dental clinic <br /> to feeling like a modern dental experience. </p>
 
@@ -268,18 +268,18 @@ const LomaDetails = () => {
           {/* <div className="soupimgsgal">
             <div className="row">
               <div className="col-lg-12">
-                <figure>
+                <figure data-gsap>
                   <img src={s9} alt="" />
                 </figure>
               </div>
 
               <div className="col-lg-4">
-                <figure>
+                <figure data-gsap>
                   <img src={s10} alt="" />
                 </figure>
               </div>
               <div className="col-lg-8">
-                <figure>
+                <figure data-gsap>
                   <img src={s11} alt="" />
                 </figure>
               </div>
@@ -317,18 +317,18 @@ const LomaDetails = () => {
             <div className="row">
               <div className="col-lg-6">
                 <div className="maultiimg">
-                  <figure>
+                  <figure data-gsap>
                     <img src={loma10} alt="" />
                   </figure>
 
-                  <figure>
+                  <figure data-gsap>
                     <img src={loma11} alt="" />
                   </figure>
                 </div>
               </div>
 
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={loma12} alt="" />
                 </figure>
               </div>
@@ -343,20 +343,20 @@ const LomaDetails = () => {
 
           {/* Identity */}
         <div className="thechallange">
-          <h3>Precis</h3>
+          <h3 data-gsap>Precis</h3>
 
           <div className="paradiv">
-           <p>Modern healthcare branding <br /> is no longer only about expertise</p>
-           <p>It is about how confidently <br /> and comfortably <br /> that expertise is experienced.</p>
-           <p>Every decision across the system <br /> was designed to reduce fear, <br /> strengthen trust, <br /> and elevate perception.</p>
-           <p>The result is a brand presence <br /> that feels refined, <br /> reassuring, <br /> and unmistakably contemporary.</p>
+           <p data-gsap>Modern healthcare branding <br /> is no longer only about expertise</p>
+           <p data-gsap>It is about how confidently <br /> and comfortably <br /> that expertise is experienced.</p>
+           <p data-gsap>Every decision across the system <br /> was designed to reduce fear, <br /> strengthen trust, <br /> and elevate perception.</p>
+           <p data-gsap>The result is a brand presence <br /> that feels refined, <br /> reassuring, <br /> and unmistakably contemporary.</p>
 
           </div>
 
             {/* <div className="soupimgsgal">
               <div className="row">
                 <div className="col-lg-12">
-                  <figure>
+                  <figure data-gsap>
                     <img src={s12} alt="" />
                   </figure>
                 </div>

@@ -10,12 +10,12 @@ const HomeBanner = () => {
       <div className="bannercontent">
         <div className="container">
           <div className="bannerbody">
-            <h1>
+            <h1 data-gsap>
               Brand <br />
               Soul <br />
               Found
             </h1>
-            <div className='btncontainer'>
+            <div className='btncontainer' data-gsap>
               <a href="" className='btn1'>Connect for Work</a>
               <a href="" className='btn2'>Book a Call</a>
             </div>

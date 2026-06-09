@@ -2,20 +2,20 @@ import React, { useEffect, useRef } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
-import rbs from "../../assets/soup/rbs.png"
+import rbs from "../../assets/soup/rbs.webp"
 import rbsvideo from "../../assets/soup/rbsvideo.mp4"
 import rbhvideo1 from "../../assets/soup/rbhvideo1.mp4"
-import rbs1 from "../../assets/soup/rbs1.png"
-import rbs2 from "../../assets/soup/rbs2.png"
-import rbs3 from "../../assets/soup/rbs3.png"
-import rbs4 from "../../assets/soup/rbs4.png"
-import rbs5 from "../../assets/soup/rbs5.png"
-import rbs6 from "../../assets/soup/rbs6.png"
-import rbs7 from "../../assets/soup/rbs7.png"
-import rbs8 from "../../assets/soup/rbs8.png"
-import rbs9 from "../../assets/soup/rbs9.png"
-import rbs10 from "../../assets/soup/rbs10.png"
-import rbs11 from "../../assets/soup/rbs11.png"
+import rbs1 from "../../assets/soup/rbs1.webp"
+import rbs2 from "../../assets/soup/rbs2.webp"
+import rbs3 from "../../assets/soup/rbs3.webp"
+import rbs4 from "../../assets/soup/rbs4.webp"
+import rbs5 from "../../assets/soup/rbs5.webp"
+import rbs6 from "../../assets/soup/rbs6.webp"
+import rbs7 from "../../assets/soup/rbs7.webp"
+import rbs8 from "../../assets/soup/rbs8.webp"
+import rbs9 from "../../assets/soup/rbs9.webp"
+import rbs10 from "../../assets/soup/rbs10.webp"
+import rbs11 from "../../assets/soup/rbs11.webp"
 
 import FashionSlider from "../soupherb/Slider"
 // import FashionSlider from "./Slider"
@@ -40,7 +40,7 @@ const RBSdetails = () => {
         },
         {
           fontSize: window.innerWidth <= 991 ? "54px" : "130px",
-          x: window.innerWidth <= 991 ? "0%" : "5%",
+          x: window.innerWidth <= 991 ? "0%" : "0%",
           y: window.innerWidth <= 991 ? "20%" : "100%",
           ease: "none",
           scrollTrigger: {
@@ -83,11 +83,11 @@ const RBSdetails = () => {
   return (
     <div className="detailsbody">
       <div className="container">
-        <figure className="mainimg">
+        <figure data-gsap className="mainimg">
           <img src={rbs} alt="" />
         </figure>
 
-        <h3 className="dettext">
+        <h3 data-gsap className="dettext">
          A legacy industrial brand rebuilt with <br /> greater clarity, structure, and modern relevance.
         </h3>
 
@@ -95,7 +95,7 @@ const RBSdetails = () => {
           <h2 ref={textRef}>Rekha Bright Steels</h2>
         </div>
 
-        <div className="subloader h-100">
+        <div data-gsap className="subloader">
           <video
             src={rbsvideo}
             autoPlay
@@ -109,29 +109,29 @@ const RBSdetails = () => {
 
         {/* Challenge */}
         <div className="thechallange">
-          <h3>The Challenge</h3>
+          <h3 data-gsap>The Challenge</h3>
 
           <div className="paradiv">
-            <p>Despite decades of credibility, <br /> the brand presence no longer reflected <br /> the scale and precision of the business.</p>
-            <p>The communication felt dated. <br /> The positioning lacked distinction. <br /> And their custom manufacturing expertise <br /> was getting lost in a commoditized market.</p>
+            <p data-gsap> Despite decades of credibility, <br /> the brand presence no longer reflected <br /> the scale and precision of the business.</p>
+            <p data-gsap> The communication felt dated. <br /> The positioning lacked distinction. <br /> And their custom manufacturing expertise <br /> was getting lost in a commoditized market.</p>
           
           </div>
 
           <div className="soupimgsgal">
             <div className="row">
               <div className="col-lg-12">
-                <figure>
+                <figure data-gsap>
                   <img src={rbs1} alt="" />
                 </figure>
               </div>
 
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={rbs2} alt="" />
                 </figure>
               </div>
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={rbs3} alt="" />
                 </figure>
               </div>
@@ -141,16 +141,16 @@ const RBSdetails = () => {
 
         {/* Approach */}
         <div className="thechallange">
-          <h3>The Approach</h3>
+          <h3 data-gsap>The Approach</h3>
 
           <div className="paradiv">
-            <p>
+            <p data-gsap> 
 We approached the brand <br /> through the lens of industrial trust.
             </p>
-            <p>
+            <p data-gsap> 
 Not flashy marketing. <br /> But clarity, structure, and confidence.
             </p>
-            <p>
+            <p data-gsap> 
 From the website system <br /> to the visual language and communication  <br /> every touchpoint was redesigned <br /> to feel dependable, modern, and precise.
             </p>
 
@@ -160,17 +160,17 @@ From the website system <br /> to the visual language and communication  <br /> 
           <div className="soupimgsgal">
             <div className="row">
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={rbs4} alt="" />
                 </figure>
               </div>
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={rbs5} alt="" />
                 </figure>
               </div>
               <div className="col-lg-12">
-                <figure>
+                <figure data-gsap>
                   <img src={rbs6} alt="" />
                 </figure>
               </div>
@@ -180,16 +180,16 @@ From the website system <br /> to the visual language and communication  <br /> 
 
         {/* Identity */}
         <div className="thechallange">
-          <h3>The Identity</h3>
+          <h3 data-gsap>The Identity</h3>
 
           <div className="paradiv">
-            <p>
+            <p data-gsap> 
             The resulting identity balances <br /> industrial robustness with modern presentation.
             </p>
-            <p>
+            <p data-gsap> 
             Structured layouts. <br /> Confident typography. <br /> Controlled visual language.
             </p>
-            <p>
+            <p data-gsap> 
             A system designed to communicate capability <br /> without unnecessary complexity.
             </p>
 
@@ -199,18 +199,18 @@ From the website system <br /> to the visual language and communication  <br /> 
           <div className="soupimgsgal">
             <div className="row">
               <div className="col-lg-12">
-                <figure>
+                <figure data-gsap>
                   <img src={rbs7} alt="" />
                 </figure>
               </div>
 
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={rbs8} alt="" />
                 </figure>
               </div>
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={rbs9} alt="" />
                 </figure>
               </div>
@@ -223,11 +223,11 @@ From the website system <br /> to the visual language and communication  <br /> 
 
         {/* Identity */}
         <div className="thechallange">
-          <h3>The Outcome</h3>
+          <h3 data-gsap>The Outcome</h3>
 
           <div className="paradiv">
-            <p>Rekha Bright Steels now communicates <br /> with greater authority, <br /> clearer positioning, <br /> and stronger consistency across platforms.</p>
-            <p>The business evolved from appearing <br /> like a conventional supplier <br /> to feeling like a long-term industrial partner.</p>
+            <p data-gsap> Rekha Bright Steels now communicates <br /> with greater authority, <br /> clearer positioning, <br /> and stronger consistency across platforms.</p>
+            <p data-gsap> The business evolved from appearing <br /> like a conventional supplier <br /> to feeling like a long-term industrial partner.</p>
 
 
 
@@ -236,7 +236,7 @@ From the website system <br /> to the visual language and communication  <br /> 
           {/* <div className="soupimgsgal">
             <div className="row">
               <div className="col-lg-12">
-                <figure>
+                <figure data-gsap>
                   <img src={wefanss12} alt="" />
                 </figure>
               </div>
@@ -266,12 +266,12 @@ From the website system <br /> to the visual language and communication  <br /> 
           <div className="soupimgsgal mb-5">
             <div className="row">
               <div className="col-lg-5">
-                <figure>
+                <figure data-gsap>
                   <img src={rbs10} alt="" />
                 </figure>
               </div>
               <div className="col-lg-7">
-                <figure>
+                <figure data-gsap>
                   <img src={rbs11} alt="" />
                 </figure>
               </div>
@@ -287,19 +287,19 @@ From the website system <br /> to the visual language and communication  <br /> 
 
         {/* Identity */}
         <div className="thechallange">
-          <h3>Precis</h3>
+          <h3 data-gsap>Precis</h3>
 
           <div className="paradiv">
-            <p>The goal was never to redesign the legacy, <br /> but to present it with greater clarity.</p>
-            <p>Every decision focused on strengthening trust, <br /> modernizing perception, <br /> and reflecting the discipline <br /> the business was already built on.</p>
-            <p>The result is a brand presence <br /> that feels experienced, <br /> grounded, <br /> and future-ready.</p>
+            <p data-gsap> The goal was never to redesign the legacy, <br /> but to present it with greater clarity.</p>
+            <p data-gsap> Every decision focused on strengthening trust, <br /> modernizing perception, <br /> and reflecting the discipline <br /> the business was already built on.</p>
+            <p data-gsap> The result is a brand presence <br /> that feels experienced, <br /> grounded, <br /> and future-ready.</p>
 
           </div>
 
           {/* <div className="soupimgsgal">
               <div className="row">
                 <div className="col-lg-12">
-                  <figure>
+                  <figure data-gsap>
                     <img src={s12} alt="" />
                   </figure>
                 </div>

@@ -5,8 +5,8 @@ const PortfolioPage = () => {
   return (
     <div>
         <div className="beadcrumb">
-            <h2>Portfolios</h2>
-            <h3>Showcase of Your Best Work</h3>
+            <h2 data-gsap>Portfolios</h2>
+            <h3 data-gsap>Showcase of Your Best Work</h3>
 
         </div>
         <Portfolio/>

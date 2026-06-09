@@ -48,7 +48,7 @@ const CultureSection = () => {
 
         ScrollTrigger.create({
           trigger: card,
-          start: "top 10%",
+          start: "top 0",
           end:
             index === cards.length - 1
               ? "bottom bottom"
@@ -57,6 +57,7 @@ const CultureSection = () => {
           pinSpacing: false,
           scrub: true,
           anticipatePin: 1,
+          // markers:true
         });
       });
 
@@ -202,9 +203,9 @@ const CultureSection = () => {
       <div className="container">
 
         <div className="culturehead">
-            <h2>We don’t hire employees. <br />
+            <h2 data-gsap>We don’t hire employees. <br />
             We align with builders.</h2>
-            <p>DIIGIIHOST is for thinkers who want to shape brands with clarity, discipline, and depth — not just execute tasks.</p>
+            <p data-gsap>DIIGIIHOST is for thinkers who want to shape brands with clarity, discipline, and depth — not just execute tasks.</p>
         </div>
 
         {/* ========================================= */}

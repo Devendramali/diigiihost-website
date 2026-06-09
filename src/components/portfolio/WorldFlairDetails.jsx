@@ -2,19 +2,19 @@ import React, { useEffect, useRef } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
-import wf from "../../assets/soup/wf.png"
-import wf1 from "../../assets/soup/wf1.png"
-import wf2 from "../../assets/soup/wf2.png"
-import wf3 from "../../assets/soup/wf3.png"
-import wf4 from "../../assets/soup/wf4.png"
-import wf5 from "../../assets/soup/wf5.png"
-import wf6 from "../../assets/soup/wf6.png"
-import wf7 from "../../assets/soup/wf7.png"
-import wf8 from "../../assets/soup/wf8.png"
-import wf9 from "../../assets/soup/wf9.png"
-import wf10 from "../../assets/soup/wf10.png"
-import wf11 from "../../assets/soup/wf11.png"
-import wf12 from "../../assets/soup/wf12.png"
+import wf from "../../assets/soup/wf.webp"
+import wf1 from "../../assets/soup/wf1.webp"
+import wf2 from "../../assets/soup/wf2.webp"
+import wf3 from "../../assets/soup/wf3.webp"
+import wf4 from "../../assets/soup/wf4.webp"
+import wf5 from "../../assets/soup/wf5.webp"
+import wf6 from "../../assets/soup/wf6.webp"
+import wf7 from "../../assets/soup/wf7.webp"
+import wf8 from "../../assets/soup/wf8.webp"
+import wf9 from "../../assets/soup/wf9.webp"
+import wf10 from "../../assets/soup/wf10.webp"
+import wf11 from "../../assets/soup/wf11.webp"
+import wf12 from "../../assets/soup/wf12.webp"
 
 import FashionSlider from "../soupherb/Slider"
 // import FashionSlider from "./Slider"
@@ -39,8 +39,8 @@ const WorldFlairDetails = () => {
         },
         {
           fontSize: window.innerWidth <= 991 ? "64px" : "200px",
-          x: window.innerWidth <= 991 ? "0%" : "20%",
-          y: window.innerWidth <= 991 ? "20%" : "70%",
+          x: window.innerWidth <= 991 ? "0%" : "0%",
+          y: window.innerWidth <= 991 ? "20%" : "100%",
           ease: "none",
           scrollTrigger: {
             trigger: sectionRef.current,
@@ -82,11 +82,11 @@ const WorldFlairDetails = () => {
   return (
     <div className="detailsbody">
       <div className="container">
-        <figure className="mainimg">
+        <figure data-gsap className="mainimg">
           <img src={wf} alt="" />
         </figure>
 
-        <h3 className="dettext">
+        <h3 data-gsap className="dettext">
         A global procurement identity designed around <br />coordination, efficiency, and operational clarity.
         </h3>
 
@@ -107,19 +107,19 @@ const WorldFlairDetails = () => {
           <div className="soupimgsgal mt-0 mb-5">
             <div className="row">
               <div className="col-lg-12">
-                <figure>
+                <figure data-gsap>
                   <img src={wf1} alt="" />
                 </figure>
               </div>
 
 
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={wf2} alt="" />
                 </figure>
               </div>
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={wf3} alt="" />
                 </figure>
               </div>
@@ -130,11 +130,11 @@ const WorldFlairDetails = () => {
 
         {/* Challenge */}
         <div className="thechallange">
-          <h3>The Challenge</h3>
+          <h3 data-gsap>The Challenge</h3>
 
           <div className="paradiv">
-            <p>World Flair operated across <br /> multiple countries, <br /> manufacturers, <br /> and procurement systems — <br /> but the digital presence <br /> did not reflect the sophistication <br /> behind the operations.</p>
-            <p>The communication felt functional. <br /> The workflows lacked visibility. <br /> And the scale of coordination <br /> was not being communicated effectively.</p>
+            <p data-gsap>World Flair operated across <br /> multiple countries, <br /> manufacturers, <br /> and procurement systems — <br /> but the digital presence <br /> did not reflect the sophistication <br /> behind the operations.</p>
+            <p data-gsap>The communication felt functional. <br /> The workflows lacked visibility. <br /> And the scale of coordination <br /> was not being communicated effectively.</p>
         
 
           </div>
@@ -142,22 +142,22 @@ const WorldFlairDetails = () => {
           <div className="soupimgsgal">
             <div className="row">
               <div className="col-lg-12">
-                <figure>
+                <figure data-gsap>
                   <img src={wf4} alt="" />
                 </figure>
               </div>
 
               {/* <div className="col-lg-4">
                 <div className="maultiimg">
-                  <figure>
+                  <figure data-gsap>
                     <img src={s3} alt="" />
                   </figure>
 
-                  <figure>
+                  <figure data-gsap>
                     <img src={s4} alt="" />
                   </figure>
 
-                  <figure>
+                  <figure data-gsap>
                     <img src={s5} alt="" />
                   </figure>
                 </div>
@@ -170,14 +170,14 @@ const WorldFlairDetails = () => {
 
         {/* Approach */}
         <div className="thechallange">
-          <h3>The Approach</h3>
+          <h3 data-gsap>The Approach</h3>
 
           <div className="paradiv">
-            <p>We approached the brand <br />
+            <p data-gsap>We approached the brand <br />
              through the lens of industrial trust.</p>
-            <p>Not flashy marketing. <br />
+            <p data-gsap>Not flashy marketing. <br />
              But clarity, structure, and confidence.</p>
-            <p>From the website system <br />
+            <p data-gsap>From the website system <br />
              to the visual language and communication  <br />
              every touchpoint was redesigned <br />
              to feel dependable, modern, and precise.</p>
@@ -190,12 +190,12 @@ const WorldFlairDetails = () => {
           <div className="soupimgsgal">
             <div className="row">
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={wf5} alt="" />
                 </figure>
               </div>
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={wf6} alt="" />
                 </figure>
               </div>
@@ -205,28 +205,28 @@ const WorldFlairDetails = () => {
 
         {/* Identity */}
         <div className="thechallange">
-          <h3>The Identity</h3>
+          <h3 data-gsap>The Identity</h3>
 
           <div className="paradiv">
-            <p>The resulting identity balances <br /> global professionalism with functional clarity</p>
-            <p>Structured layouts. <br /> Controlled communication. <br /> Minimal visual friction. <br /> System-led presentation.</p>
-            <p>A framework designed to simplify <br /> high-volume operational movement.</p>
+            <p data-gsap>The resulting identity balances <br /> global professionalism with functional clarity</p>
+            <p data-gsap>Structured layouts. <br /> Controlled communication. <br /> Minimal visual friction. <br /> System-led presentation.</p>
+            <p data-gsap>A framework designed to simplify <br /> high-volume operational movement.</p>
           </div>
 
           <div className="soupimgsgal">
             <div className="row">
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={wf7} alt="" />
                 </figure>
               </div>
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={wf8} alt="" />
                 </figure>
               </div>
               <div className="col-lg-12">
-                <figure>
+                <figure data-gsap>
                   <img src={wf9} alt="" />
                 </figure>
               </div>
@@ -236,14 +236,14 @@ const WorldFlairDetails = () => {
 
         {/* Identity */}
         <div className="thechallange">
-          <h3>The Outcome</h3>
+          <h3 data-gsap>The Outcome</h3>
 
           <div className="paradiv">
-            <p>World Flair now communicates <br />
+            <p data-gsap>World Flair now communicates <br />
              with greater clarity, <br />
              stronger operational confidence, <br />
              and a more contemporary digital presence.</p>
-            <p>The business evolved <br />
+            <p data-gsap>The business evolved <br />
              from appearing process-heavy <br />
              to feeling system-driven and globally connected.</p>
 
@@ -268,19 +268,19 @@ const WorldFlairDetails = () => {
           <div className="soupimgsgal mb-5">
             <div className="row">
               <div className="col-lg-12">
-                <figure>
+                <figure data-gsap>
                   <img src={wf10} alt="" />
                 </figure>
               </div>
 
                
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={wf11} alt="" />
                 </figure>
               </div>
               <div className="col-lg-6">
-                <figure>
+                <figure data-gsap>
                   <img src={wf12} alt="" />
                 </figure>
               </div>
@@ -295,20 +295,20 @@ const WorldFlairDetails = () => {
 
         {/* Identity */}
         <div className="thechallange">
-          <h3>Precis</h3>
+          <h3 data-gsap>Precis</h3>
 
           <div className="paradiv">
-            <p>The strongest operational brands <br /> are rarely the loudest.</p>
-            <p>They are the ones <br /> that make complexity feel effortless.</p>
-            <p>Every decision across the system <br /> was designed to reduce friction, <br /> improve visibility, <br /> and communicate scale with greater precision.</p>
-            <p>The result is a brand presence <br /> that feels structured, <br /> efficient, <br /> and internationally aligned.</p>
+            <p data-gsap>The strongest operational brands <br /> are rarely the loudest.</p>
+            <p data-gsap>They are the ones <br /> that make complexity feel effortless.</p>
+            <p data-gsap>Every decision across the system <br /> was designed to reduce friction, <br /> improve visibility, <br /> and communicate scale with greater precision.</p>
+            <p data-gsap>The result is a brand presence <br /> that feels structured, <br /> efficient, <br /> and internationally aligned.</p>
 
           </div>
 
           {/* <div className="soupimgsgal">
               <div className="row">
                 <div className="col-lg-12">
-                  <figure>
+                  <figure data-gsap>
                     <img src={s12} alt="" />
                   </figure>
                 </div>

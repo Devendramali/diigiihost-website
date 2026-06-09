@@ -43,7 +43,7 @@ const FashionSlider = () => {
             loop={true}
             speed={800}
             centeredSlides={true}
-            slidesPerView={1.8}
+            slidesPerView={1.6}
             spaceBetween={30}
             navigation={true}
 

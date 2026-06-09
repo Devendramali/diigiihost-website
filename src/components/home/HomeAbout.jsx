@@ -1,17 +1,59 @@
-import React from 'react'
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import soulVideo from "../../assets/home/616aa4f43e35046810fa4937de6485b437ce34dd.gif"
 import science from "../../assets/home/science.gif"
 import scale from "../../assets/home/scale.gif"
 
 const HomeAbout = () => {
+
+      const textRef = useRef(null);
+
+  const headingText = ` At DiigiiHost, we exist to help brands fiind theiir soul, honor theiir truth, and connect wiith theiir audiience iin ways that last.`;
+
+  useEffect(() => {
+    const words = headingText.split(" ");
+
+  textRef.current.innerHTML =
+  
+  words
+    .map(
+      (word) =>
+        `<span class="word"><span class="inner-word">${word}</span></span>`
+    )
+    .join(" ");
+
+    const allWords = textRef.current.querySelectorAll(".inner-word");
+
+    gsap.set(allWords, {
+    //   opacity: 0.15,
+      color:"#1A766D"
+    });
+
+    gsap.to(allWords, {
+    //   opacity: 1,
+     color:"#B1EBE0",
+      stagger: 0.15,
+      ease: "none",
+      scrollTrigger: {
+        trigger: textRef.current,
+        start: "top 50%",
+        end: "30% 30%",
+        scrub: true,
+      },
+    });
+  }, []);
   return (
     <div className='homeabout'>
         <div className="container">
-        <h2>At DiigiiHost, we exist to help brands fiind theiir soul, honor theiir truth, and connect wiith theiir audiience iin ways that last.</h2>
+            <div className='textscroll'>
+                
+        <h2 ref={textRef} data-gsap>At DiigiiHost, we exist to help brands fiind theiir soul, honor theiir truth, and connect wiith theiir audiience iin ways that last.</h2>
+            </div>
 
         <div className="soulcards">
             <div className="row">
-                <div className="col-lg-4">
+                <div className="col-lg-4" data-gsap>
                     <div className="card1 soul">
                         <div className="conten1">
                         <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -25,7 +67,7 @@ const HomeAbout = () => {
                         </figure>
                     </div>
                 </div>
-                <div className="col-lg-4">
+                <div className="col-lg-4" data-gsap>
                     <div className="card1 soul">
                         <div className="conten1">
                             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
@@ -42,7 +84,7 @@ const HomeAbout = () => {
                         </figure>
                     </div>
                 </div>
-                <div className="col-lg-4">
+                <div className="col-lg-4" data-gsap>
                     <div className="card1 soul">
                         <div className="conten1">
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
@@ -59,7 +101,7 @@ const HomeAbout = () => {
             </div>
         </div>
 
-        <h3>Design is not decoration it’s communication.</h3>
+        <h3 data-gsap>Design is not decoration it’s communication.</h3>
         </div>
             
 

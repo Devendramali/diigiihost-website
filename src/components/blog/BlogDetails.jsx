@@ -47,24 +47,24 @@ const BlogDetails = () => {
                     <div className="col-lg-9">
                         <div className="bloadhead">
                             <ul>
-                                <li>Artificial Intelligence</li>
-                                <li>AI</li>
+                                <li data-gsap>Artificial Intelligence</li>
+                                <li data-gsap>AI</li>
                             </ul>
-                            <h2>Discover how AI is transforming industries by enhancing efficiency, accuracy, and innovation across various fields.</h2>
-                            <p>Learn about the latest AI technologies that are revolutionizing the way we work, solve problems, and create new opportunities.</p>
+                            <h2 data-gsap>Discover how AI is transforming industries by enhancing efficiency, accuracy, and innovation across various fields.</h2>
+                            <p data-gsap>Learn about the latest AI technologies that are revolutionizing the way we work, solve problems, and create new opportunities.</p>
                         </div>
                     </div>
                     <div className="col-lg-3">
                         <div className="leftdetaisl">
-                            <div className="sidecon">
+                            <div className="sidecon" data-gsap>
                                 <p>Published Date</p>
                                 <h4>April 27, 2024</h4>
                             </div>
-                            <div className="sidecon">
+                            <div className="sidecon" data-gsap>
                                 <p>Author</p>
                                 <h3>Alkesh Gupta</h3>
                             </div>
-                            <div className="sidecon">
+                            <div className="sidecon" data-gsap>
                                 <p>Share Blog</p>
                                 <ul>
                                     <li><button>
@@ -98,13 +98,13 @@ const BlogDetails = () => {
                         </div>
                     </div>
                 </div>
-                <figure>
+                <figure data-gsap>
                     <img src={blog1} alt="" />
                 </figure>
 
                 <div className="detaicontent">
                     <div className="row">
-                        <div className="col-lg-9">
+                        <div className="col-lg-9" data-gsap>
                             <p>Artificial intelligence is reshaping the world around us, driving major changes in how industries operate. From healthcare to finance, AI boosts efficiency by automating routine tasks and improving accuracy in data analysis. It enables businesses to solve complex problems faster and unlock new opportunities for innovation. By learning from vast amounts of data, AI systems can predict trends, personalize experiences, and optimize processes. This transformation is not just about technology but also about empowering people to work smarter and create value in ways never before possible. As AI continues to evolve, it promises to revolutionize sectors like education, manufacturing, and customer service, making them more responsive and adaptive to changing needs. Embracing AI means embracing a future where creativity and technology work hand in hand to build a better world.</p>
                     <h2>Discover how AI is transforming industries by enhancing efficiency, accuracy, and innovation across various fields.</h2>
                     <p>Artificial intelligence is reshaping the world around us, driving major changes in how industries operate. From healthcare to finance, AI boosts efficiency by automating routine tasks and improving accuracy in data analysis. It enables businesses to solve complex problems faster and unlock new opportunities for innovation. By learning from vast amounts of data, AI systems can predict trends, personalize experiences, and optimize processes. This transformation is not just about technology but also about empowering people to work smarter and create value in ways never before possible. As AI continues to evolve, it promises to revolutionize sectors like education, manufacturing, and customer service, making them more responsive and adaptive to changing needs. Embracing AI means embracing a future where creativity and technology work hand in hand to build a better world.</p>
@@ -116,7 +116,7 @@ const BlogDetails = () => {
                     <h2>Related Blogs</h2>
                      <div className="row">
                         {blogData.map((item) => (
-                            <a href="#!"
+                            <a href="#!" data-gsap
                             key={item.id}
                             className={`blog-card col-lg-4 ${item.large ? "large-card" : ""}`}
                             >

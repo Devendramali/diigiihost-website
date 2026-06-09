@@ -170,7 +170,7 @@ const BlogList = () => {
       <div className="container">
         <div className="blog-filter">
           {filters.map((item, index) => (
-            <a
+            <a data-gsap
               key={index}
               className={active === item ? "btn1" : "btn2"}
               onClick={() => setActive(item)}
@@ -182,7 +182,7 @@ const BlogList = () => {
 
         <div className="blog-grid">
           {filteredBlogs.map((item) => (
-            <a href="#!"
+            <a href="#!" data-gsap
               key={item.id}
               className={`blog-card ${item.large ? "large-card" : ""}`}
             >

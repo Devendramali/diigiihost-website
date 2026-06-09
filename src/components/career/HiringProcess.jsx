@@ -107,7 +107,7 @@ useEffect(() => {
         <div className="container">
           {/* TOP CONTENT */}
           <div className="process-heading">
-            <h2>
+            <h2 data-gsap>
               We Don’t Hire Fast.
               <br />
               We Hire Right.
@@ -153,7 +153,7 @@ useEffect(() => {
 
           {/* BOTTOM TEXT */}
           <div className="process-bottom-text">
-            <h2>
+            <h2 data-gsap>
               Because talent without
               <br />
               alignment creates friction.

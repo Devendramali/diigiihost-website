@@ -8,27 +8,27 @@ const YouWillBe = () => {
   return (
     <div className='youwillbe'>
         <div className="container">
-            <h2>You will be exposed to:</h2>
+            <h2 data-gsap>You will be exposed to:</h2>
             <div className="youwill">
-                <div className="willbox">
+                <div className="willbox" data-gsap>
                     <figure>
                         <img src={img1} alt="" />
                     </figure>
                     <h3>Performance reviews based on clarity and outcomes</h3>
                 </div>
-                <div className="willbox">
+                <div className="willbox" data-gsap>
                     <figure>
                         <img src={img2} alt="" />
                     </figure>
                     <h3>Real business decisions</h3>
                 </div>
-                <div className="willbox">
+                <div className="willbox" data-gsap>
                     <h3>Founder-level conversations</h3>
                     <figure>
                         <img src={img4} alt="" />
                     </figure>
                 </div>
-                <div className="willbox">
+                <div className="willbox" data-gsap>
                     <h3>Strategy frameworks</h3>
                     <figure>
                         <img src={img3} alt="" />

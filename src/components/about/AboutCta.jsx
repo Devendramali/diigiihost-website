@@ -37,8 +37,9 @@ const AboutCta = () => {
 
     ScrollTrigger.create({
       trigger: sectionRef.current,
-      start: "top 75%",
+      start: "10% 55%",
       once: true,
+      // markers:true,
       onEnter: () => {
         animateCounter(count1, 14, "+ Countries");
         animateCounter(count2, 30, "+ Industries");
@@ -55,29 +56,29 @@ const AboutCta = () => {
           <div className="row">
             <div className="col-lg-4">
               <div className="ctabox">
-                <figure>
+                <figure data-gsap>
                   <img src={img1} alt="" />
                 </figure>
-                <h3 ref={count1}>0+ Countries</h3>
-                <p>
+                <h3 data-gsap ref={count1}>0+ Countries</h3>
+                <p data-gsap>
                   Collaborating with founders, institutions, and businesses across global markets while staying rooted in purposeful execution.
                 </p>
               </div>
             </div>
 
             <div className="col-lg-4">
-              <figure>
+              <figure data-gsap>
                 <img src={ctaabout} alt="" />
               </figure>
             </div>
 
             <div className="col-lg-4">
               <div className="ctabox">
-                <figure>
+                <figure data-gsap>
                   <img src={img2} alt="" />
                 </figure>
-                <h3 ref={count2}>0+ Industries</h3>
-                <p>
+                <h3 data-gsap ref={count2}>0+ Industries</h3>
+                <p data-gsap>
                 From healthcare and hospitality to manufacturing, education, technology, and government ecosystems — every industry taught us a different way people build trust.
                 </p>
               </div>
@@ -85,29 +86,29 @@ const AboutCta = () => {
 
             <div className="col-lg-5">
               <div className="ctabox">
-                <figure>
+                <figure data-gsap>
                   <img src={img3} alt="" />
                 </figure>
-                <h3 ref={count3}>+ Companies</h3>
-                <p>
+                <h3 data-gsap ref={count3}>+ Companies</h3>
+                <p data-gsap>
                  Brands, platforms, and digital systems crafted across industries ranging from healthcare and education to manufacturing, hospitality, and government.
                 </p>
               </div>
             </div>
 
             <div className="col-lg-3">
-              <figure>
+              <figure data-gsap>
                 <img src={ctaabout2} alt="" />
               </figure>
             </div>
 
             <div className="col-lg-4">
               <div className="ctabox">
-                <figure>
+                <figure data-gsap>
                   <img src={img4} alt="" />
                 </figure>
-                <h3 ref={count4}>0+ Years</h3>
-                <p>
+                <h3 data-gsap ref={count4}>0+ Years</h3>
+                <p data-gsap>
                   Years spent refining creative processes, development systems,
                   and premium web design standards.
                 </p>

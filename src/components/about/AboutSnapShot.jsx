@@ -58,9 +58,9 @@ const AboutSnapShot = () => {
     <div className="snapshot">
       <div className="container">
         <div className="snapshot-head">
-          <h2>Team Snapshots</h2>
+          <h2 data-gsap>Team Snapshots</h2>
 
-          <div className="snap-btns">
+          <div className="snap-btns"  data-gsap>
             <button className="snap-prev"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path d="M6 16L2 12L6 8M2 12H22" stroke="#1A766D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg></button>
@@ -97,12 +97,15 @@ const AboutSnapShot = () => {
             992: {
               slidesPerView: 3,
             },
+             1024: {
+              slidesPerView: 4.5,
+            },
           }}
           className="snapshot-slider"
         >
           {teamData.map((item, index) => (
             <SwiperSlide key={index}>
-              <div className="team-card">
+              <div className="team-card" data-gsap>
                 <img src={item.img} alt="" />
 
                 <div className="team-overlay">

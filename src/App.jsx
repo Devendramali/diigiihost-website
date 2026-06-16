@@ -24,6 +24,8 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import useGsapAos from './components/hooks/useGsapAos'
+import Error from './pages/Error'
+import Thankyou from './pages/Thankyou'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -37,7 +39,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
-            <Route path='/*' element={<PortfolioPage />} />
+            {/* <Route path='/*' element={<PortfolioPage />} /> */}
             <Route path='/blog' element={<Blog />} />
             <Route path='/blog-details' element={<BlogDetailsPage />} />
             <Route path='/contact' element={<ContactPage />} />
@@ -57,6 +59,11 @@ function App() {
             <Route path='/ca-nair' element={<CaNair />} />
             <Route path='/worldflair' element={<WorldFlair />} />
             <Route path='/verteacal-blendz' element={<VerteacalBlendz />} />
+
+
+
+            <Route path='/*' element={<Error />} />
+            <Route path='/thank-you' element={<Thankyou />} />
 
           </Route>
         </Routes>

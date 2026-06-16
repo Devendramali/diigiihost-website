@@ -182,7 +182,7 @@ const BlogList = () => {
 
         <div className="blog-grid">
           {filteredBlogs.map((item) => (
-            <a href="#!" data-gsap
+            <a href="blog-details" data-gsap
               key={item.id}
               className={`blog-card ${item.large ? "large-card" : ""}`}
             >

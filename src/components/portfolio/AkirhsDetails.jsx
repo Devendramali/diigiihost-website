@@ -34,14 +34,14 @@ const AkirhsDetails = () => {
       gsap.fromTo(
         textRef.current,
         {
-          fontSize: window.innerWidth <= 991 ? "32px" : "64px",
+          fontSize: window.innerWidth <= 1024 ? "32px" : "64px",
           x: "0%",
           y: "0%",
         },
         {
-          fontSize: window.innerWidth <= 991 ? "64px" : "200px",
-          x: window.innerWidth <= 991 ? "0%" : "0%",
-          y: window.innerWidth <= 991 ? "80%" : "100%",
+          fontSize: window.innerWidth <= 1024 ? "64px" : "200px",
+          x: window.innerWidth <= 1024 ? "0%" : "0%",
+          y: window.innerWidth <= 1024 ? "80%" : "100%",
           ease: "none",
           scrollTrigger: {
             trigger: sectionRef.current,

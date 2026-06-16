@@ -63,7 +63,7 @@ const FashionSlider = () => {
 
   breakpoints={{
     0: {
-      slidesPerView: 1.1,
+      slidesPerView: 1.4,
       slidesPerGroup: 1,
     },
     768: {

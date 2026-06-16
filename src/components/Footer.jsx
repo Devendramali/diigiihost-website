@@ -33,9 +33,9 @@ const Footer = () => {
 
         </div>
         <hr />
-        <p className="copyright" data-gsap>Copyright © 2026. All Rights Reserved. Powered By : DIIGIIHOST</p>
-        <div className="footerlogo" data-gsap>
-            <img src={footerlog} alt="" />
+        <p className="copyright">Copyright © 2026. All Rights Reserved. Powered By : DIIGIIHOST</p>
+        <div className="footerlogo" >
+            <img src={footerlog}  alt="" />
 
         </div>
 

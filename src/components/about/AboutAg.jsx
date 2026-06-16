@@ -18,7 +18,7 @@ const AboutAg = () => {
                         <rect x="36.25" y="0.25" width="27.5" height="63.5" rx="13.75" stroke="#B1EBE0" stroke-width="0.5"/>
                         </svg>
 
-                        <p data-gsap><span class="space-block"></span><span class="space-block"></span>Attention can be bought. Trust has to be designed, experienced, and earned over time. <br /> We build for the second</p>
+                        <p data-gsap><span class="space-block"></span><span class="space-block"></span>Attention can be bought. Trust has to be designed, experienced, and earned over time. We build for the second</p>
 
                         <h3 data-gsap>- Alkesh Gupta</h3>
                     </div>

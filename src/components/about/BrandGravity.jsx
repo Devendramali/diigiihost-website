@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import c1 from "../../assets/about/cd1.png";
 import c2 from "../../assets/about/cd2.png";
@@ -12,9 +14,16 @@ const BrandGravity = () => {
   const sectionRef = useRef(null);
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      if (window.innerWidth <= 991) return;
+    if (window.innerWidth <= 991) {
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 80,
+      });
+      return;
+    }
 
+    const ctx = gsap.context(() => {
       const cards = gsap.utils.toArray(".movecard");
       const title = sectionRef.current.querySelector(".brandbox1 h2");
       const sub = sectionRef.current.querySelector(".brandbox1 h4");
@@ -23,7 +32,6 @@ const BrandGravity = () => {
       const scale = sectionRef.current.querySelector(".soultext .scale");
       const com = sectionRef.current.querySelector(".soultext .com");
 
-      /* initial state */
       gsap.set(cards[0], {
         opacity: 0,
         y: -700,
@@ -31,22 +39,24 @@ const BrandGravity = () => {
         scale: 0.6,
         rotate: 8,
       });
+
       gsap.set(cards[1], {
         opacity: 0,
-       y: -250,
-          x: -80,
-        scale: 0.6,
-        rotate: 8,
-      });
-      gsap.set(cards[2], {
-        opacity: 0,
-       y: -500,
-          x: 200,
+        y: -250,
+        x: -80,
         scale: 0.6,
         rotate: 8,
       });
 
-      gsap.set([title, sub, sub , soul , science , scale , com ], {
+      gsap.set(cards[2], {
+        opacity: 0,
+        y: -500,
+        x: 200,
+        scale: 0.6,
+        rotate: 8,
+      });
+
+      gsap.set([title, sub, soul, science, scale, com], {
         opacity: 0,
         y: 50,
       });
@@ -62,74 +72,22 @@ const BrandGravity = () => {
         },
       });
 
-      tl.to(soul, {
-        opacity: 0.8,
-        y: 0,
-        duration: 1,
-      })
-
-        /* show cards one by one from top */
-        .to(cards[0], {
-          opacity: 1,
-        y: -700,
-        x: -150,
-          duration: 1,
-        })
-        .to(science, {
-        opacity: 0.8,
-        y: 0,
-        duration: 1,
-      })
-
-        .to(cards[1], {
-          opacity: 1,
-          y: -250,
-          x: -80,
-          duration: 1,
-        })
-        .to(scale, {
-        opacity: 0.8,
-        y: 0,
-        duration: 1,
-      })
-
-        .to(cards[2], {
-          opacity: 1,
-          y: -500,
-          x: 200,
-          duration: 1,
-        })
-        .to(com, {
-        opacity: 0.8,
-        y: 0,
-        duration: 1,
-      })
-
-        /* bring all center */
-        .to(
-          cards,
-          {
-            x: 0,
-            y: 0,
-            scale: 1,
-            rotate: 0,
-            stagger: 0.15,
-            duration: 1.5,
-          }
-        )
-
-        /* show text */
-        .to(title, {
-          opacity: 1,
+      tl.to(soul, { opacity: 1, y: 0 })
+        .to(cards[0], { opacity: 1, y: -700, x: -150 })
+        .to(science, { opacity: 1, y: 0 })
+        .to(cards[1], { opacity: 1, y: -250, x: -80 })
+        .to(scale, { opacity: 1, y: 0 })
+        .to(cards[2], { opacity: 1, y: -500, x: 200 })
+        .to(com, { opacity: 1, y: 0 })
+        .to(cards, {
+          x: 0,
           y: 0,
-          duration: 1,
+          scale: 1,
+          rotate: 0,
+          stagger: 0.15,
         })
-
-        .to(sub, {
-          opacity: 1,
-          y: 0,
-          duration: 1,
-        });
+        .to(title, { opacity: 1, y: 0 })
+        .to(sub, { opacity: 1, y: 0 });
     }, sectionRef);
 
     return () => ctx.revert();
@@ -141,33 +99,46 @@ const BrandGravity = () => {
         <div className="gravitycontainer" ref={sectionRef}>
           <div className="soultext">
             <h2>
-             <span className="soul"> When Soul shapes positioning,</span> <br />
-              <span className="science">Science structures execution,</span><br />
-              <span className="scale">And Scale is approached consciously,</span> <br />
-              <span className="com">brands stop chasing attention. <br />
-              They start building trust, recognition, <br />
-              and long-term recall.</span>
+              <span className="soul" data-aos="fade-up">
+                When Soul shapes positioning,
+              </span>
+              <br />
+              <span className="science" data-aos="fade-up">
+                Science structures execution,
+              </span>
+              <br />
+              <span className="scale" data-aos="fade-up">
+                And Scale is approached consciously,
+              </span>
+              <br />
+              <span className="com" data-aos="fade-up">
+                brands stop chasing attention.
+                <br />
+                They start building trust, recognition,
+                <br />
+                and long-term recall.
+              </span>
             </h2>
           </div>
 
           <div className="brandbox1">
-            <h2>The</h2>
+            <h2 data-aos="fade-up">The</h2>
 
             <div className="topstage">
-              <div className="movecard card1">
+              <div className="movecard card1" data-aos="fade-right">
                 <img src={c2} alt="" />
               </div>
 
-              <div className="movecard card2">
+              <div className="movecard card2" data-aos="fade-up">
                 <img src={c3} alt="" />
               </div>
 
-              <div className="movecard card3">
+              <div className="movecard card3" data-aos="fade-left">
                 <img src={c1} alt="" />
               </div>
             </div>
 
-            <h4>
+            <h4 data-aos="fade-up">
               philosophy is not a method.
               <br />
               It is a way of thinking.

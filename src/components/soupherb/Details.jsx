@@ -43,7 +43,7 @@ const Details = () => {
   {
     fontSize: window.innerWidth <= 991 ? "64px" : "200px",
     x: window.innerWidth <= 991 ? "0%" : "0%",
-    y: window.innerWidth <= 991 ? "20%" : "100%",
+    y: window.innerWidth <= 991 ? "100%" : "100%",
     ease: "none",
     scrollTrigger: {
       trigger: sectionRef.current,

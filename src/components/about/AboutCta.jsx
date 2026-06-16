@@ -53,7 +53,7 @@ const AboutCta = () => {
     <div className="aboutcta" ref={sectionRef}>
       <div className="container">
         <div className="cta">
-          <div className="row">
+          <div className="row g-0">
             <div className="col-lg-4">
               <div className="ctabox">
                 <figure data-gsap>

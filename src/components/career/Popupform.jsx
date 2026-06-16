@@ -53,23 +53,37 @@ const Popupform = ({ showPopup, setShowPopup }) => {
                   <div className="form-group">
                     <label>Applying For Position *</label>
 
-                    <select>
-                      <option>Select</option>
-                      <option>Frontend Developer</option>
-                      <option>Backend Developer</option>
-                      <option>UI/UX Designer</option>
-                    </select>
+                    <div className="select-wrap">
+                      <select>
+                        <option>Select</option>
+                        <option>Frontend Developer</option>
+                        <option>Backend Developer</option>
+                        <option>UI/UX Designer</option>
+                      </select>
+
+                      <span className="select-arrow">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="10" height="5" viewBox="0 0 10 5" fill="none">
+                      <path d="M0 0L5 5L10 0H0Z" fill="white"/>
+                    </svg>
+                      </span>
+                    </div>
                   </div>
 
                   <div className="form-group">
                     <label>Current Location *</label>
-
+                <div className="select-wrap">
                     <select>
                       <option>Select</option>
                       <option>Nagpur</option>
                       <option>Pune</option>
                       <option>Mumbai</option>
                     </select>
+                         <span className="select-arrow">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="10" height="5" viewBox="0 0 10 5" fill="none">
+                      <path d="M0 0L5 5L10 0H0Z" fill="white"/>
+                    </svg>
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>

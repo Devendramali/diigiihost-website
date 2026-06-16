@@ -1,10 +1,14 @@
 import React from "react";
 
 const Breadcrumb = ({ breadcrumb }) => {
+  const title = breadcrumb[breadcrumb.length - 1];
+  const shouldScroll = title.length > 30;
+
   return (
     <div className="breadcrumb">
-      {/* Last item show in h2 */}
-      <h2>{breadcrumb[breadcrumb.length - 1]}</h2>
+      <div className="breadcrumb-title-wrap">
+        <h2 className={shouldScroll ? "marquee-title" : ""}>{title}</h2>
+      </div>
 
       <ul>
         {breadcrumb.map((item, index) => (
@@ -13,10 +17,7 @@ const Breadcrumb = ({ breadcrumb }) => {
               <a href="">{item}</a>
             </li>
 
-            {/* Last item ke pehle || */}
             {index === breadcrumb.length - 2 && <li>||</li>}
-
-            {/* Baaki sab ke beech | */}
             {index < breadcrumb.length - 2 && <li>|</li>}
           </React.Fragment>
         ))}

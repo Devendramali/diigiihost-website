@@ -34,14 +34,14 @@ const RBSdetails = () => {
       gsap.fromTo(
         textRef.current,
         {
-          fontSize: window.innerWidth <= 991 ? "32px" : "64px",
+          fontSize: window.innerWidth <= 1024 ? "32px" : "64px",
           x: "0%",
           y: "0%",
         },
         {
-          fontSize: window.innerWidth <= 991 ? "54px" : "130px",
-          x: window.innerWidth <= 991 ? "0%" : "0%",
-          y: window.innerWidth <= 991 ? "20%" : "100%",
+          fontSize: window.innerWidth <= 1024 ? "54px" : "130px",
+          x: window.innerWidth <= 1024 ? "0%" : "0%",
+          y: window.innerWidth <= 1024 ? "20%" : "100%",
           ease: "none",
           scrollTrigger: {
             trigger: sectionRef.current,

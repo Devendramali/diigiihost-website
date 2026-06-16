@@ -51,7 +51,8 @@ const AboutText = () => {
         <div className="row sdfdsvsd">
           <div className="col-lg-6">
             <div className="abtxt">
-              <svg data-gsap width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <div className="abcoote">
+          <svg data-gsap width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="-0.25" y="0.25" width="27.5" height="63.5" rx="13.75" transform="matrix(-1 0 0 1 27.5 0)" stroke="#B1EBE0" stroke-width="0.5"/>
             <rect x="36.25" y="0.25" width="27.5" height="63.5" rx="13.75" stroke="#B1EBE0" stroke-width="0.5"/>
             </svg>
@@ -66,6 +67,8 @@ const AboutText = () => {
               <p data-gsap>
                 That question shapes everything we do.
               </p>
+              </div>
+              
             </div>
           </div>
 

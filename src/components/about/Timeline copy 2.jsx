@@ -1,5 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useLayoutEffect, useRef, useState } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import timeline from "../../assets/about/timeline.png";
+
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const milestones = [
   {
@@ -40,55 +45,94 @@ const milestones = [
   },
 ];
 
-
 export default function Timeline() {
+  const wrapRef = useRef(null);
+  const scrollTriggerRef = useRef(null);
+
   const [active, setActive] = useState(0);
-  const sectionRef = useRef(null);
 
-  const handleNext = () => {
-    if (active < milestones.length - 1) {
-      setActive((prev) => prev + 1);
-    }
-  };
+  useLayoutEffect(() => {
+    const section = wrapRef.current;
+    const total = milestones.length;
 
-  const handlePrev = () => {
-    if (active > 0) {
-      setActive((prev) => prev - 1);
-    }
-  };
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: section,
+        start: "5% top",
+        end: `+=${total * 700}`,
+        scrub: 1,
+        pin: true,
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!sectionRef.current) return;
+       onUpdate: (self) => {
+        const index = Math.min(
+          total - 1,
+          Math.floor(self.progress * (total - 1))
+        );
 
-      const rect = sectionRef.current.getBoundingClientRect();
-      const totalHeight = rect.height - window.innerHeight;
+        setActive(prev => (prev !== index ? index : prev));
+      },
+      },
+    });
 
-      if (totalHeight <= 0) return;
+    scrollTriggerRef.current = tl.scrollTrigger;
 
-      let progress = (-rect.top / totalHeight) * milestones.length;
-      progress = Math.max(0, Math.min(milestones.length - 1, progress));
-
-      setActive(Math.floor(progress));
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+ return () => {
+  if (tl.scrollTrigger) {
+    tl.scrollTrigger.kill();
+  }
+  tl.kill();
+};
   }, []);
 
-  return (
-    <div
-      ref={sectionRef}
-      className="timeline-wrapper"
-      style={{ minHeight: "300vh" }}
-    >
-      <div className="timeline-sticky">
-        <div className="timeline-header heading1">
-          <h2>Milestones That Shaped Us</h2>
 
+  // NEXT BUTTON
+  const handleNext = () => {
+
+    const st = scrollTriggerRef.current;
+
+    if (!st) return;
+
+    if (active < milestones.length - 1) {
+      const nextIndex = active + 1;
+
+      setActive(nextIndex);
+
+
+      gsap.to(window, {
+        duration: 1,
+        scrollTo:
+          st.start + ((st.end - st.start) * nextIndex) / milestones.length,
+      });
+    }
+  };
+
+  // PREV BUTTON
+  const handlePrev = () => {
+    if (active > 0) {
+      const prevIndex = active - 1;
+
+      setActive(prevIndex);
+
+      const st = scrollTriggerRef.current;
+
+      gsap.to(window, {
+        duration: 1,
+        scrollTo:
+          st.start + ((st.end - st.start) * prevIndex) / milestones.length,
+      });
+    }
+  };
+
+  return (
+    <>
+    <div className="timeline-wrapper" ref={wrapRef}>
+      <div className="heading1 d-flex justify-content-between">
+        <h2 data-gsap>Milestones That Shaped Us</h2>
+
+        <div className="btnnestprev" data-gsap>
           <div className="snap-btns">
-            <button onClick={handlePrev}>
-                         <svg
+            <button className="snap-prev" onClick={handlePrev}>
+              <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
@@ -104,8 +148,9 @@ export default function Timeline() {
                 />
               </svg>
             </button>
-            <button onClick={handleNext}>
-                <svg
+
+            <button className="snap-next" onClick={handleNext}>
+              <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
@@ -123,26 +168,33 @@ export default function Timeline() {
             </button>
           </div>
         </div>
+      </div>
 
-        <div className="timeline-track">
-          {milestones.map((item, i) => (
-            <div
-              key={i}
-              className={`timeline-card ${active === i ? "active" : ""}`}
-            >
-              <div className="year">{item.year}</div>
+      <div className="timelinewrappewr" data-gsap>
+        {milestones.map((item, i) => (
+          <div
+            key={i}
+            className={
+              active === i
+                ? "timeline-main active"
+                : "timeline-main"
+            }
+          >
+            <h1>{item.year}</h1>
 
-              {active === i && (
-                <div className="content">
-                  <h3>{item.title}</h3>
-                  <p>{item.description}</p>
-                  <img src={timeline} alt="" />
-                </div>
-              )}
+            <div className="timeline-content">
+              <h2>{item.title}</h2>
+
+              <p>{item.description}</p>
+
+              <div className="timeimg">
+                <img src={timeline} alt="" />
+              </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
+    </>
   );
 }

@@ -21,8 +21,8 @@ const AboutMissionVision = () => {
              
 
               <div className="text">
-                <h3>Mission</h3>
-                <p>To help businesses build brands that communicate clearly, operate intelligently, and grow meaningfully in a constantly evolving digital world.</p>
+                <h3 data-gsap>Mission</h3>
+                <p data-gsap>To help businesses build brands that communicate clearly, operate intelligently, and grow meaningfully in a constantly evolving digital world.</p>
               </div>
             </div>
 
@@ -31,8 +31,8 @@ const AboutMissionVision = () => {
            
 
               <div className="text">
-                <h3>Vision</h3>
-                <p>To create reference-worthy brands and digital ecosystems that elevate how businesses from India are perceived, experienced, and remembered globally.</p>
+                <h3 data-gsap>Vision</h3>
+                <p data-gsap>To create reference-worthy brands and digital ecosystems that elevate how businesses from India are perceived, experienced, and remembered globally.</p>
               </div>
             </div>
           </div>

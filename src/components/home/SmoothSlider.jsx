@@ -10,35 +10,35 @@ const slides = [
   {
     image: img1,
     thumb: img1,
-    title: "Ca Nair",
+    title: "SoupHerb",
     desc: "Committed to sustainability, we harness technology to build a greener and more efficient future for all.",
     tags: ["Renewable Energy", "Smart Grids", "Waste Management Tech","Sustainable Materials"],
   },
   {
     image: img2,
     thumb: img2,
-    title: "Dr.Gaikwad",
+    title: "LOMA",
     desc: "Pioneering innovative solutions that transform ideas into reality, pushing the boundaries of technology.",
     tags: ["Blockchain", "Augmented Reality","Cloud Computing","Cybersecurity"],
   },
   {
     image: img3,
     thumb: img3,
-    title: "Loma Dental",
+    title: "WE FANSS",
     desc: "Committed to sustainability, we harness technology to build a greener and more efficient future for all.",
     tags: ["Dental Hygiene", "Oral Health Systems","Dental Waste Disposal","Biocompatible Materials"],
   },
   {
     image: img4,
     thumb: img4,
-    title: "Spouherb ",
+    title: "RBS",
     desc: "Committed to sustainability, we harness technology to build a greener and more efficient future for all.",
     tags: ["Organic Ingredients", "Gluten-Free","Non-GMO","Vegan Friendly"],
   },
   {
     image: img5,
     thumb: img5,
-    title: "Verteacal Blendz ",
+    title: "Dr Gaikwad",
     desc: "Committed to sustainability, we harness technology to build a greener and more efficient future for all.",
     tags: ["Renewable Energy", "Smart Grids","Waste Management Tech","Sustainable Materials"],
   },
@@ -65,7 +65,7 @@ const SmoothSlider = () => {
   useEffect(() => {
     const auto = setInterval(() => {
       nextSlide()
-    }, 3000)
+    }, 4000)
 
     return () => clearInterval(auto)
   }, [])
@@ -131,7 +131,7 @@ const SmoothSlider = () => {
             ))}
           </div>
           <div>
-            <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+            <a href="#!"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
           <path d="M42 26V38C42 39.0609 41.5786 40.0783 40.8284 40.8284C40.0783 41.5786 39.0609 42 38 42H10C8.93913 42 7.92172 41.5786 7.17157 40.8284C6.42143 40.0783 6 39.0609 6 38V10C6 8.93913 6.42143 7.92172 7.17157 7.17157C7.92172 6.42143 8.93913 6 10 6H22M42 6L24 24M42 6H30M42 6V18" stroke="#B1EBE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg></a>
           </div>

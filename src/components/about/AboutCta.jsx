@@ -109,8 +109,7 @@ const AboutCta = () => {
                 </figure>
                 <h3 data-gsap ref={count4}>0+ Years</h3>
                 <p data-gsap>
-                  Years spent refining creative processes, development systems,
-                  and premium web design standards.
+                 Spent understanding not just how brands look online - but how businesses grow, evolve, inherit legacy, and earn relevance over time.
                 </p>
               </div>
             </div>

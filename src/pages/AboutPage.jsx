@@ -21,7 +21,7 @@ const AboutPage = () => {
     <AboutAg/>
     <AboutCard/>
     <AboutDesign/>
-    <AboutSnapShot/>
+    {/* <AboutSnapShot/> */}
     <BrandGravity/>
     <AboutMissionVision/>
     <LogoReveal/>

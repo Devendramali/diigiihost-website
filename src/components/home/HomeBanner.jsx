@@ -16,8 +16,8 @@ const HomeBanner = () => {
               Found
             </h1>
             <div className='btncontainer' data-gsap>
-              <a href="" className='btn1'>Connect for Work</a>
-              <a href="" className='btn2'>Book a Call</a>
+              <a href="/#homecontact" className='btn1'>Connect for Work</a>
+              <a href="/#homecontact" className='btn2'>Book a Call</a>
             </div>
 
           </div>

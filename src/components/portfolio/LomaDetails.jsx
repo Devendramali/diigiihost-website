@@ -19,6 +19,24 @@ import loma12 from "../../assets/soup/loma12.webp"
 import FashionSlider from "../soupherb/Slider"
 // import FashionSlider from "./Slider"
 
+import img11 from "../../assets/portfolio/g1.png";
+import img21 from "../../assets/portfolio/g2.png";
+import img31 from "../../assets/portfolio/g3.png";
+
+    const slides = [
+    { img: img11, name: "SoupHerb", link:"/soupherb" },
+    { img: img21, name: "lanova", link:"/lanova" },
+    { img: img31, name: "WE FANSS" , link:"/wefanss"},
+    { img: img11, name: "RBS ",link:"/rekha-bright-still" },
+    { img: img21, name: "Dr Gaikwad" , link:"/dr-gaikwad"},
+    { img: img31, name: "AKIRHS" , link:"/akirhs"},
+    { img: img11, name: "CA NAIR", link:"/ca-nair" },
+    { img: img21, name: "LOMA Dental", link:"/loma-dental" },
+    { img: img31, name: "WORLD FLAIR", link:"/worldflair" },
+    { img: img31, name: "VB", link:"/verteacal-blendz" },
+  ];
+
+
 gsap.registerPlugin(ScrollTrigger)
 
 const LomaDetails = () => {
@@ -369,7 +387,7 @@ const LomaDetails = () => {
         </div>
 
         {/* <FashionSlider/> */}
-        <FashionSlider/>
+        <FashionSlider slides={slides}/>
 
       </div>
     </div> 

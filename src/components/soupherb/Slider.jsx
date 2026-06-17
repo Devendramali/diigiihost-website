@@ -2,25 +2,13 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 
-import img1 from "../../assets/portfolio/g1.png";
-import img2 from "../../assets/portfolio/g2.png";
-import img3 from "../../assets/portfolio/g3.png";
+
 
 import "swiper/css";
 import "swiper/css/navigation";
 
-const FashionSlider = () => {
-  const slides = [
-    { img: img1, name: "Dr. Shuddhodhan Gaikwad" },
-    { img: img2, name: "Dr. Amelia" },
-    { img: img3, name: "Dr. Sophia" },
-    { img: img1, name: "Dr. Shuddhodhan Gaikwad" },
-    { img: img2, name: "Dr. Amelia" },
-    { img: img3, name: "Dr. Sophia" },
-    { img: img1, name: "Dr. Shuddhodhan Gaikwad" },
-    { img: img2, name: "Dr. Amelia" },
-    { img: img3, name: "Dr. Sophia" },
-  ];
+const FashionSlider = ({slides}) => {
+
 
   return (
     <div className="fashion-slider-section">
@@ -79,7 +67,7 @@ const FashionSlider = () => {
 
   className="supslider"
 >
-          {slides.map((item, index) => (
+        {slides?.map((item, index) => (
             <SwiperSlide key={index}>
               <a href="#!" className="fashion-card">
                 <div className="imgover">

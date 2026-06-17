@@ -41,7 +41,7 @@ function App() {
             <Route index element={<HomePage />} />
             {/* <Route path='/*' element={<PortfolioPage />} /> */}
             <Route path='/blog' element={<Blog />} />
-            <Route path='/blog-details' element={<BlogDetailsPage />} />
+           <Route path="/blog/:slug" element={<BlogDetailsPage />} />
             <Route path='/contact' element={<ContactPage />} />
             <Route path='/about' element={<AboutPage />} />
             <Route path='/career' element={<Career />} />

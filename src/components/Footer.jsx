@@ -9,31 +9,30 @@ const Footer = () => {
             <h2 data-gsap>Craftiing viisual storiies that capture the essence of your brand.</h2>
 
             <ul className='footermenu'>
-                <li data-gsap><Link>HOME</Link></li>
-                <li data-gsap><Link>Portfolio</Link></li>
-                <li data-gsap><Link>About</Link></li>
-                <li data-gsap><Link>Projects</Link></li>
-                <li data-gsap><Link>Blogs</Link></li>
-                <li data-gsap><Link>Services</Link></li>
+                <li data-gsap><Link to="/">HOME</Link></li>
+                <li data-gsap><Link to="/about">About</Link></li>
+                <li data-gsap><Link to="/portfolio">Portfolio</Link></li>
+                <li data-gsap><Link to="/blog">Blogs</Link></li>
+                <li data-gsap><Link to="/career">Career</Link></li>
+                <li data-gsap><Link to="/contact">Contact</Link></li>
             </ul>
 
             <div className="policy">
                 <ul>
                     <li data-gsap><Link>Privacy Policy</Link></li>
-                    <li data-gsap><Link>User Agreement</Link></li>
-                    <li data-gsap><Link>Cookie Policy</Link></li>
+                    <li data-gsap><Link>Terms & Conditions</Link></li>
                 </ul>
                 <ul>
-                    <li data-gsap><Link>Instagram</Link></li>
-                    <li data-gsap><Link>Facebook</Link></li>
-                    <li data-gsap><Link>Linkedin</Link></li>
-                    <li data-gsap><Link>Threads</Link></li>
+                    <li data-gsap><a target='_blank' href='https://www.instagram.com/diigiihost_in/'>Instagram</a></li>
+                    <li data-gsap><a target='_blank' href='https://www.facebook.com/DiigiiHost.In/'>Facebook</a></li>
+                    <li data-gsap><a target='_blank' href='https://www.linkedin.com/company/diigiihost'>Linkedin</a></li>
+                    <li data-gsap><a target='_blank' href='https://x.com/DiigiiHost_In'>Twitter</a></li>
                 </ul>
             </div>
 
         </div>
         <hr />
-        <p className="copyright">Copyright © 2026. All Rights Reserved. Powered By : DIIGIIHOST</p>
+        <p className="copyright">Copyright © 2026. All Rights Reserved. Powered By : <a href="https://www.digihost.in/">DIIGIIHOST</a></p>
         <div className="footerlogo" >
             <img src={footerlog}  alt="" />
 

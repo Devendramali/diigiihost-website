@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 const AboutText = () => {
   const textRef = useRef(null);
 
-  const headingText = `We did not begin by chasing trends, algorithms, or vanity metrics. We began with a quieter belief, that brands deserve clarity before visibility, trust before traction, and meaning before scale. What started as a pursuit of thoughtful design slowly evolved into a brand engineering studio helping founders, family businesses, and growing organizations build identities people don’t just notice, but remember, trust, and return to.Today, DiigiiHost works at the intersection of soul, systems, and storytelling, crafting brands that feel aligned from the inside out.`;
+  const headingText = `We did not begin by chasing trends, algorithms, or vanity metrics. We began with a quieter belief, that brands deserve clarity before visibility, trust before traction, and meaning before scale. What started as a pursuit of thoughtful design slowly evolved into a brand engineering studio helping founders, family businesses, and growing organizations build identities people don’t just notice, but remember, trust, and return to. Today, DiigiiHost works at the intersection of soul, systems, and storytelling, crafting brands that feel aligned from the inside out.`;
 
   useEffect(() => {
     const words = headingText.split(" ");
